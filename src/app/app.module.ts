@@ -1,30 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import {InputComponent} from "../components/input/input.component";
-import { HeaderComponent } from './header/header.component';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatListModule } from '@angular/material/list';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { ResetComponent } from './reset/reset.component';
-import { EmailComponent } from './email/email.component';
-import { DocumentComponent } from './document/document.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DocumentComponent } from './components/document/document.component';
+import { EmailComponent } from './components/email/email.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { ResetComponent } from './components/reset/reset.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { InputComponent } from './components/input/input.component';
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent,
     HeaderComponent,
+    InputComponent,
     SidenavComponent,
     HomeComponent,
     DashboardComponent,
@@ -45,6 +46,8 @@ import { DocumentComponent } from './document/document.component';
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
