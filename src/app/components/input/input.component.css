@@ -1,3 +1,64 @@
 .formgroup {
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
+}
+.input-container {
+    width: 540px;
+    height: 48px;
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+input:-webkit-autofill {
+    background: #FFFFFF;
+}
+.myInputField {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.005em;
+    color: #000000;
+    border: none;
+    width: 75%;
+}
+
+input .myInputField {
+    border: none;
+}
+input:focus {
+    outline: none;
+    border: none;
+}
+
+.input-container .highlight {
+    outline: none !important;
+    border-color: #000000;
+    box-shadow: 0 0 2px #719ECE;
+}
+.error{
+    color: red;
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #000;
+    opacity: 1; /* Firefox */
+  }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.errosContainer {
+    display: flex;
+    justify-content: space-between;
 }

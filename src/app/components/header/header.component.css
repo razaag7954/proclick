@@ -1,0 +1,17 @@
+header {
+    width: 84%;
+    margin: auto;
+}
+.logo {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: -0.846154px;
+    margin: 37px;
+}
+.logo a {
+    text-decoration: none;
+    color: #000000;
+}

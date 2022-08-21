@@ -7,3 +7,14 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.auth {
+  background: url('./assets/images/authbg.png') no-repeat center center fixed;
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+}

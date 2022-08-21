@@ -1,0 +1,20 @@
+.header {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600 !important;
+    font-size: 38px !important;
+    line-height: 52px;
+    color: #000000;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+}
+
+.description {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: #000000;
+    margin-bottom: 40px;
+}

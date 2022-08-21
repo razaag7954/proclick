@@ -8,7 +8,6 @@ import {FormGroup} from "@angular/forms";
 })
 export class AppComponent implements OnInit{
   title = 'proclick';
-  formData: FormGroup | undefined
   ngOnInit() {
 
   }

@@ -1,0 +1,40 @@
+<AuthScreenContainer>
+    <AuthScreenHeader
+        header="SignUp"
+        description="Nulla porttitor accumsan tincidunt. 
+             Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat,
+             accumsan id imperdiet et, "
+        >
+    </AuthScreenHeader>
+   <formContainer>
+    <form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
+        <app-input placeholder="First Name" type="email" [required]="true"
+            [control]="$any(formData.get('firstName'))">
+            <mat-icon>account_circle</mat-icon>
+        </app-input>
+        <app-input placeholder="Last Name" type="email" [required]="true"
+            [control]="$any(formData.get('lastName'))">
+            <mat-icon>account_circle</mat-icon>
+        </app-input>
+        <app-input placeholder="Email" type="email" [required]="true"
+            [control]="$any(formData.get('email'))">
+            <mat-icon> mail_outline</mat-icon>
+        </app-input>
+ 
+        <app-input placeholder="Password" type="Password" [required]="true"
+            [control]="$any(formData.get('password'))">
+            <mat-icon>visibility</mat-icon>
+        </app-input>
+
+        <app-input placeholder="OSHA #" type="number" [required]="true"
+            [control]="$any(formData.get('oshno'))">
+        </app-input>
+        
+        <my-button text="Sign Up" [isDisabled]="formData.invalid" type="submit">
+        </my-button>
+    </form>
+   </formContainer>
+   <AuthScreenFooter [isPadding]="true">  
+    Already have an account <b><a href="auth/login">LogIn</a></b>
+  </AuthScreenFooter>
+ </AuthScreenContainer>

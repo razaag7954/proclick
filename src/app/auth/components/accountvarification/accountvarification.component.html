@@ -1,0 +1,14 @@
+<AuthScreenContainer>
+    <AuthScreenHeader header="Account Verification" description="Please enter the verification code sent to your email"
+        email={{email}}>
+    </AuthScreenHeader>
+    <formContainer>
+        <form [formGroup]="formData" (ngSubmit)="onSubmit(formData)">
+            <code-input [isCodeHidden]="true" [codeLength]="5" (codeChanged)="onCodeChanged($event)"
+                (codeCompleted)="onCodeCompleted($event)">
+            </code-input>
+            <my-button text="Submit" [isDisabled]="isButtonDisable" type="submit">
+            </my-button>
+        </form>
+    </formContainer>
+</AuthScreenContainer>

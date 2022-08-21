@@ -1,0 +1,16 @@
+code-input {
+    --item-background: #EEEEEE;
+    --item-height: 80px;
+    /* --item-width: 80px; */
+    --item-spacing: 15px;
+    --item-border-radius: 8px;
+}
+
+code-input span input {
+    width: 80px !important;
+}
+
+/* one-time-code {
+    background: #EEEEEE;
+    border-radius: 8px;
+} */
