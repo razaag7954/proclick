@@ -15,6 +15,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 
 import { CodeInputModule } from 'angular-code-input';
+import { SelectComponent } from '../components/select/select.component';
 
 
 
@@ -25,7 +26,8 @@ import { CodeInputModule } from 'angular-code-input';
     AuthScreenFormContainerComponent,
     AuthScreenHeaderComponent,
     AuthScreenFooterComponent,
-    InputComponent
+    InputComponent,
+    SelectComponent
   ],
   exports:[
     ButtonComponent,
@@ -42,7 +44,8 @@ import { CodeInputModule } from 'angular-code-input';
     MatIconModule,
     MatDividerModule,
     MatListModule,
-    CodeInputModule
+    CodeInputModule,
+    SelectComponent
   ],
   imports: [
     CommonModule,
