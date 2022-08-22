@@ -36,4 +36,18 @@ export class AddProfileComponent implements OnInit {
   onSubmit( form: any ) {
     this.router.navigateByUrl( '/dashboard/home' );
   };
+
+  profileType = [
+    { id: 1, name: 'Pm Super' },
+    { id: 2, name: 'GC' },
+    { id: 3, name: 'Sub' },
+    { id: 4, name: 'Worker' },
+    { id: 5, name: 'Admin' },
+  ];
+
+  ohsaType = [
+    { id: 1, name: 'Volvo' },
+    { id: 2, name: 'Saab' },
+    { id: 3, name: 'Opel' }
+  ];
 }
