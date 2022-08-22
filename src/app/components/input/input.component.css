@@ -39,9 +39,7 @@ input:focus {
     border-color: #000000;
     box-shadow: 0 0 2px #719ECE;
 }
-.error{
-    color: red;
-}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: #000;
     opacity: 1; /* Firefox */
@@ -61,4 +59,7 @@ input[type=number] {
 .errosContainer {
     display: flex;
     justify-content: space-between;
+}
+.error{
+    color: red;
 }

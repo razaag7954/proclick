@@ -16,7 +16,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { CodeInputModule } from 'angular-code-input';
 import { SelectComponent } from '../components/select/select.component';
-
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 @NgModule({
@@ -46,7 +46,8 @@ import { SelectComponent } from '../components/select/select.component';
     MatListModule,
     CodeInputModule,
     SelectComponent,
-    MatGridListModule
+    MatGridListModule,
+    NgSelectModule
   ],
   imports: [
     CommonModule,
@@ -59,7 +60,8 @@ import { SelectComponent } from '../components/select/select.component';
     MatDividerModule,
     MatListModule,
     MatGridListModule,
-    CodeInputModule
+    CodeInputModule,
+    NgSelectModule
   ]
 })
 export class SharedModule { }

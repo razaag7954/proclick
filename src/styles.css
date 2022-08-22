@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
 *{
   margin: 0;
   padding: 0;
@@ -20,3 +21,36 @@ a {
   height: 100%;
   width: 100%;
 }
+
+.mySelect .ng-select-container {
+  height: 48px !important;
+  width: 100%;
+  /* padding: 10px; */
+  background: #FFFFFF;
+  border: 1px solid #000000 !important;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.mySelect  .ng-dropdown-panel {
+  left: 0px;
+}
+
+.mySelect  .ng-dropdown-panel-items{
+  text-align: left !important;
+}
+.ng-dropdown-panel.ng-select-top {
+  border-bottom-color: #000000 !important;
+}
+.ng-dropdown-panel {
+  border-bottom-color: #000000 !important;
+  border-top-color: #000000 !important;
+}
+.ng-dropdown-panel{
+  border-color: #000000 !important;
+}
+/* .ng-select-opened {
+  border: 1px solid #000000 !important;
+  border-radius: 6px;
+} */

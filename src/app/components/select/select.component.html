@@ -1,1 +1,14 @@
-<p>select works!</p>
+<div class="container">
+    <ng-select [items]="options" bindLabel="name" bindValue="id" [placeholder]="placeholder" [(ngModel)]="selectedValue"
+        class="mySelect" [formControl]="control">
+    </ng-select>
+
+    <ng-container *ngIf="displayErrors()">
+        <div class="errosContainer">
+            <div *ngIf="control.errors?.['required']" class="error">
+                Please select from option
+            </div>
+        </div>
+        
+    </ng-container>
+</div>

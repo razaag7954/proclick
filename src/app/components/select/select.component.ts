@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'MySelectComponent',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select.component.css']
 })
 export class SelectComponent implements OnInit {
-
+  @Input() selectedValue!: number;
+  @Input() options!: any[];
+  @Input() placeholder:string = "Select";
+  @Input() control! : FormControl;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  displayErrors() {
+    const {dirty, touched, errors} = this.control;
+
+    return dirty && touched && errors;
   }
 
 }
