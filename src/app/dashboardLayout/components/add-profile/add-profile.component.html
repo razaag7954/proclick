@@ -1,13 +1,63 @@
-<mat-grid-list cols='24' rowHeight='484px' gutterSize='35px'>
-    <mat-grid-tile colspan='11' rowspan='1'>
-        <div class='tile-container'>
-            <div class='tile-body'>
+<mat-grid-list cols='24' rowHeight='1000px' gutterSize='20px'>
+    <mat-grid-tile colspan='10'>
+        <div class='tile-container left-tile-container'>
+            <div style="width: 255px;">
+                <b>Admin</b>
+                <div class='divider'></div>
+                <label for='file'>
+                    <div class='file-upload-container'>
+                        <img src='../../../../assets/Icons/upload-file.svg' />
+                        <div class='divider'></div>
+                        Click to Upload File
+                    </div>
+                </label>
+                <input id='file' type='file' style='display: none;' />
+                <div class='divider'></div>
+                <div class='osha-text'>OSHA #:  ABCS0245</div>
+                <div class='divider'></div>
+                <div class='osha-expiration'>OSHA Expiration:  ABCS0245</div>
+                <div class='divider'></div>
+                <app-input placeholder='OSHA Type' type='text' [required]='true' [control]="$any(formData.get('phoneNumber'))"></app-input>
+                <div class='divider'></div>
+                <div class='upload-buttons-container'>
+                    <button class='profile-button'>Upload Photo ID</button>
+                    <button class='profile-button'>Upload OSHA Card</button>
+                </div>
+                <div class='divider'></div>
+                <button class='profile-button orientation-button'>
+                    <div class='odbt-container'>
+                        Orientation Documents
+                        <svg style="width:16px;height:16px;margin-left:12px;" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                        </svg>
+                    </div>
+                </button>
             </div>
         </div>
     </mat-grid-tile>
-    <mat-grid-tile colspan='13' rowspan='1'>
-        <div class='tile-container'>
-            <div class='tile-body'></div>
+    <mat-grid-tile colspan='14'>
+        <div class='tile-container right-tile-container'>
+            <div class='add-profile-form-container'>
+                <div class='view-profile-button-container'>
+                    <button class='profile-button'>View All Profiles</button>
+                </div>
+                <div class='divider'></div>
+                <form [formGroup]='formData' (ngSubmit)='onSubmit(formData.value)'>
+                    <app-input placeholder='First Name' type='text' [required]='true' [control]="$any(formData.get('firstName'))"></app-input>
+                    <app-input placeholder='Lirst Name' type='text' [required]='true' [control]="$any(formData.get('lastName'))"></app-input>
+                    <app-input placeholder='Title' type='text' [required]='true' [control]="$any(formData.get('title'))"></app-input>
+                    <app-input placeholder='Business Name' type='text' [required]='true' [control]="$any(formData.get('businessName'))"></app-input>
+                    <app-input placeholder='Business Category' type='text' [required]='true' [control]="$any(formData.get('businessCategory'))"></app-input>
+                    <app-input placeholder='Contractor ID' type='text' [required]='true' [control]="$any(formData.get('contractorId'))"></app-input>
+                    <app-input placeholder='Address' type='text' [required]='true' [control]="$any(formData.get('address'))"></app-input>
+                    <app-input placeholder='City' type='text' [required]='true' [control]="$any(formData.get('city'))"></app-input>
+                    <app-input placeholder='State' type='text' [required]='true' [control]="$any(formData.get('state'))"></app-input>
+                    <app-input placeholder='Country' type='text' [required]='true' [control]="$any(formData.get('country'))"></app-input>
+                    <app-input placeholder='Phone Number' type='text' [required]='true' [control]="$any(formData.get('phoneNumber'))"></app-input>
+                    <app-input placeholder='Profile Type' type='text' [required]='true' [control]="$any(formData.get('profileType'))"></app-input>
+                    <my-button text='Save' [isDisabled]='formData.invalid' type='submit'></my-button>
+                </form>
+            </div>
         </div>
     </mat-grid-tile>
 </mat-grid-list>

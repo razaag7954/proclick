@@ -14,6 +14,7 @@
     color: #FFFFFF;
     margin: 20px 0;
     cursor: pointer;
+    text-transform: capitalize;
 }
 
 .my-btn:disabled {

@@ -10,7 +10,7 @@ export class ButtonComponent implements OnInit {
   public buttonText = '';
   @Input()
 	set text(name: string) {
-		this.buttonText = name.toUpperCase();
+		this.buttonText = name;
 	}
 	get name(): string {
 		return this.buttonText;

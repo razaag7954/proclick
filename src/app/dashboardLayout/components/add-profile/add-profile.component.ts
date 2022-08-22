@@ -1,22 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-
 @Component( {
   selector: 'app-add-profile',
   templateUrl: './add-profile.component.html',
-  styleUrls: ['./add-profile.component.css']
+  styleUrls: [ './add-profile.component.css' ]
 } )
 
 export class AddProfileComponent implements OnInit {
-  formData!: FormGroup;
 
+  formData!: FormGroup;
+  
   constructor( private router: Router ) { }
 
   ngOnInit(): void {
     this.createForm();
-  };
-
+  }
   createForm() {
     this.formData = new FormGroup( {
       firstName: new FormControl( '', [ Validators.required ] ),
@@ -30,12 +29,11 @@ export class AddProfileComponent implements OnInit {
       state: new FormControl( '', [ Validators.required ] ),
       country: new FormControl( '', [ Validators.required ] ),
       phoneNumber: new FormControl( '', [ Validators.required ] ),
-      profileType: new FormControl( '', [ Validators.required ] ),
-    } )
+      profileType: new FormControl( '', [ Validators.required ] )
+    } );
   };
 
-  onSubmit( form: any ){
-    console.log( form );
+  onSubmit( form: any ) {
     this.router.navigateByUrl( '/dashboard/home' );
   };
 }
