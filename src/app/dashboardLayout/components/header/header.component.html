@@ -1,0 +1,21 @@
+<nav class='header'>
+    <div class='profile-section-container'>
+        <div class='profile-name-container'>
+            <div class='profile-name'>Muhammad Quddus Siddiqui</div>
+            <div class='profile-email'>abc@gmail.com</div>
+        </div>
+        <button mat-button [matMenuTriggerFor]='menu' class='profile-dropdown'>
+            <div class='profile-image-container'>
+                <img class='profile-image' src='https://picsum.photos/201/301' />
+            </div>
+            <div class='down-icon'>
+                <svg style='width:24px;height:24px' viewBox='0 0 24 24'>
+                    <path fill='currentColor' d='M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z' />
+                </svg>
+            </div>
+        </button>
+        <mat-menu style='background-color: #000000;' class='profile-dd-container' #menu='matMenu'>
+            <button class='profile-dd-item' mat-menu-item (click)="handleLogout()">Logout</button>
+        </mat-menu>
+    </div>
+</nav>

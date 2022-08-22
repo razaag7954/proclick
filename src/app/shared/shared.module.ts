@@ -13,7 +13,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
-import { HeaderComponent } from '../components/header/header.component';
+
 import { CodeInputModule } from 'angular-code-input';
 
 
@@ -25,8 +25,7 @@ import { CodeInputModule } from 'angular-code-input';
     AuthScreenFormContainerComponent,
     AuthScreenHeaderComponent,
     AuthScreenFooterComponent,
-    InputComponent,
-    HeaderComponent
+    InputComponent
   ],
   exports:[
     ButtonComponent,
@@ -43,7 +42,6 @@ import { CodeInputModule } from 'angular-code-input';
     MatIconModule,
     MatDividerModule,
     MatListModule,
-    HeaderComponent,
     CodeInputModule
   ],
   imports: [

@@ -1,0 +1,35 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .mat-drawer-container {
+    height: 100%;
+    position: unset;
+  }
+  .mat-drawer {
+    width: 300px;
+    background: #000000;
+    height: 100%;
+    position: fixed;
+  }
+  .mat-drawer-content {
+    width: calc( 100% - 300px );
+    height: 100vh;
+    background-color: #FFFFFF;
+  }
+  .app-header {
+    width: 100%;
+    height: 85px;
+    background-color: #FFFFFF;
+    position: fixed;
+    /* box-shadow: 0 5px 5px 0px rgba( 0, 0, 0, 0.2 ); */
+  }
+  .router-outlet-container {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    padding: 135px 50px 50px 50px;
+  }
+  
+  

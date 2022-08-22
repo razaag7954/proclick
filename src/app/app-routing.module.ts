@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthComponent } from './auth/auth.component';
-import { LoginComponent } from './auth/components/login/login.component';
-import { HomeComponent } from "./components/home/home.component";
+import { AuthComponent } from './authLayout/auth.component';
+import { LoginComponent } from './authLayout/components/login/login.component';
 
-import { SignupComponent } from './auth/components/signup/signup.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { ForgetpasswordComponent } from './auth/components/forgetpassword/forgetpassword.component';
-import { ResetpasswordComponent } from './auth/components/resetpassword/resetpassword.component';
-import { AccountvarificationComponent } from './auth/components/accountvarification/accountvarification.component';
+import { AccountvarificationComponent } from './authLayout/components/accountvarification/accountvarification.component';
+import { ForgetpasswordComponent } from './authLayout/components/forgetpassword/forgetpassword.component';
+import { ResetpasswordComponent } from './authLayout/components/resetpassword/resetpassword.component';
+import { SignupComponent } from './authLayout/components/signup/signup.component';
+import { DocumentComponent } from './dashboardLayout/components/document/document.component';
+import { InviteComponent } from './dashboardLayout/components/invite/invite.component';
+import { ProfileComponent } from './dashboardLayout/components/profile/profile.component';
+import { ReportsComponent } from './dashboardLayout/components/reports/reports.component';
+import { SitesComponent } from './dashboardLayout/components/sites/sites.component';
+import { DashboardComponent } from './dashboardLayout/dashboard.component';
+import { HomeComponent } from './dashboardLayout/components/home/home.component';
 const routes: Routes = [
   {path: '', redirectTo: 'auth/login', pathMatch: 'full'},
   {path: 'auth', redirectTo: 'auth/login', pathMatch: 'full'},
@@ -25,6 +30,11 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent,
     children:[
       {path: 'home', component: HomeComponent},
+      { path: 'documents', component: DocumentComponent },
+      { path: 'reports', component: ReportsComponent },
+      { path: 'invite', component: InviteComponent },
+      { path: 'profile', component: ProfileComponent },
+      { path: 'sites', component: SitesComponent },
     ]
   },
 ];
