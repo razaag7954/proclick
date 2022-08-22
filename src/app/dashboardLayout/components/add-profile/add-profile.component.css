@@ -1,0 +1,81 @@
+.tile-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.left-tile-container {
+    align-items: flex-start;
+}
+.right-tile-container {
+    align-items: flex-end;
+}
+.profile-button {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #000000;
+    cursor: pointer;
+}
+.divider {
+    height: 20px;
+}
+.file-upload-container {
+    width: 255px;
+    height: 255px;
+    background-color: #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.osha-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+.osha-expiration {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #D80000;
+}
+.orientation-button {
+    width: 100%;
+}
+.odbt-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.upload-buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.view-profile-button-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.add-profile-form-container {
+    width: 540px;
+}
