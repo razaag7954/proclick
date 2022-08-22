@@ -12,8 +12,6 @@ import { SitesComponent } from './components/sites/sites.component';
 import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './components/home/home.component';
 
-
-
 @NgModule({
   declarations: [
     DashboardComponent,

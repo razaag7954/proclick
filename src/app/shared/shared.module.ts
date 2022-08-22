@@ -13,7 +13,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 import { CodeInputModule } from 'angular-code-input';
 
 
@@ -42,6 +42,7 @@ import { CodeInputModule } from 'angular-code-input';
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    MatGridListModule,
     CodeInputModule
   ],
   imports: [
@@ -54,6 +55,7 @@ import { CodeInputModule } from 'angular-code-input';
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    MatGridListModule,
     CodeInputModule
   ]
 })
