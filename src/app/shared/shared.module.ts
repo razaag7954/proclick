@@ -13,7 +13,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
-
+import { MatGridListModule } from '@angular/material/grid-list';
 import { CodeInputModule } from 'angular-code-input';
 import { SelectComponent } from '../components/select/select.component';
 
@@ -45,7 +45,8 @@ import { SelectComponent } from '../components/select/select.component';
     MatDividerModule,
     MatListModule,
     CodeInputModule,
-    SelectComponent
+    SelectComponent,
+    MatGridListModule
   ],
   imports: [
     CommonModule,
@@ -57,6 +58,7 @@ import { SelectComponent } from '../components/select/select.component';
     MatIconModule,
     MatDividerModule,
     MatListModule,
+    MatGridListModule,
     CodeInputModule
   ]
 })
