@@ -11,6 +11,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { SitesComponent } from './components/sites/sites.component';
 import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './components/home/home.component';
+import { AddProfileComponent } from './components/add-profile/add-profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './components/home/home.component';
     InviteComponent,
     ProfileComponent,
     SitesComponent,
-    HomeComponent
+    HomeComponent,
+    AddProfileComponent
   ],
   imports: [
     CommonModule,

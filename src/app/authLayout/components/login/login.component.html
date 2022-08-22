@@ -17,7 +17,7 @@
            [control]="$any(formData.get('password'))">
            <mat-icon>visibility</mat-icon>
        </app-input>
-       <AuthScreenFooter rightText="Forget Password" link="auth/forgetpassword">  
+       <AuthScreenFooter rightText="Forget Password" link="auth/forgetpassword">
           Have you not account <b><a href="auth/signup">SignUp</a></b>
         </AuthScreenFooter>
        <my-button text="LogIn" [isDisabled]="formData.invalid" type="submit">
