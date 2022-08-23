@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard.component';
 import { AddProfileComponent } from './components/add-profile/add-profile.component';
 import { ImagePopupComponent } from './components/image-popup/image-popup.component';
 import { PdfPopupComponent } from './components/pdf-popup/pdf-popup.component';
+import { ListofdocumentComponent } from './components/listofdocument/listofdocument.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PdfPopupComponent } from './components/pdf-popup/pdf-popup.component';
     AddProfileComponent,
     ImagePopupComponent,
     PdfPopupComponent,
+    ListofdocumentComponent,
   ],
   imports: [
     CommonModule,

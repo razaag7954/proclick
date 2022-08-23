@@ -20,6 +20,12 @@ import { CodeInputModule } from 'angular-code-input';
 import { SelectComponent } from '../components/select/select.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { DatatableComponent } from '../components/datatable/datatable.component';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,8 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     AuthScreenFooterComponent,
     InputComponent,
     DividerComponent,
-    SelectComponent
+    SelectComponent,
+    DatatableComponent
   ],
   exports:[
     ButtonComponent,
@@ -53,7 +60,13 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     MatGridListModule,
     MatDialogModule,
     NgSelectModule,
-    PdfViewerModule
+    PdfViewerModule,
+    DatatableComponent,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   imports: [
     CommonModule,
@@ -68,8 +81,13 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     MatGridListModule,
     MatDialogModule,
     CodeInputModule,
+    PdfViewerModule,
     NgSelectModule,
-    PdfViewerModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class SharedModule { }

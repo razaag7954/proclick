@@ -1,16 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@ng-select/ng-select/themes/default.theme.css";
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body { 
+html,
+body {
   height: 100%;
-  
-  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
 a {
   text-decoration: none;
   color: #000;
@@ -34,32 +38,115 @@ a {
   align-items: center;
 }
 
-.mySelect  .ng-dropdown-panel {
+.mySelect .ng-dropdown-panel {
   left: 0px;
 }
 
-.mySelect  .ng-dropdown-panel-items{
+.mySelect .ng-dropdown-panel-items {
   text-align: left !important;
 }
+
 .ng-dropdown-panel.ng-select-top {
   border-bottom-color: #000000 !important;
 }
+
 .ng-dropdown-panel {
   border-bottom-color: #000000 !important;
   border-top-color: #000000 !important;
 }
-.ng-dropdown-panel{
+
+.ng-dropdown-panel {
   border-color: #000000 !important;
 }
 /* .ng-select-opened {
   border: 1px solid #000000 !important;
   border-radius: 6px;
 } */
-
 .image-modal-container .mat-dialog-container {
   padding: 0;
   overflow: hidden;
 }
 .pdf-dialog .mat-dialog-container {
   padding: 0px;
+}
+
+.filteration .mat-form-field-appearance-legacy .mat-form-field-infix {
+  display: flex !important;
+}
+
+.mat-form-field-underline {
+  display: none
+}
+
+.mat-focused .mat-form-field-underline {
+  display: block
+}
+
+.myDataTable .mat-elevation-z8 {
+  box-shadow: inset 0px -1px 0px rgba(198, 209, 221, 0.5);
+}
+
+.mat-cell {
+  background: rgba(240, 242, 244, 0.5);
+  box-shadow: inset -1px 0px 0px rgba(198, 209, 221, 0.5);
+}
+
+.myDataTablePagination {
+  position: relative;
+}
+
+.myDataTablePagination .mat-paginator-page-size-label {
+  /* font-family: 'IBM Plex Mono'; */
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #151515;
+}
+
+.myDataTablePagination .mat-select-value {
+  font-size: 14px;
+}
+
+.myDataTablePagination .mat-paginator-page-size {
+  width: 205px;
+  height: 48px;
+  background: #FFFFFF;
+  box-shadow: inset -1px 0px 0px rgba(198, 209, 221, 0.5);
+}
+
+.myDataTablePagination .mat-paginator-range-label {
+  width: 167px;
+  height: 48px;
+  background: #FFFFFF;
+  box-shadow: inset -1px 0px 0px rgba(198, 209, 221, 0.5);
+  padding: 16px;
+  /* font-family: 'IBM Plex Mono'; */
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+
+  color: #151515;
+
+}
+
+.myDataTablePagination .mat-paginator-container {
+  justify-content: flex-start;
+}
+
+.myDataTablePagination .mat-tooltip-trigger {
+  position: absolute;
+  right: 0
+}
+
+.myDataTablePagination .mat-paginator-navigation-previous {
+  right: 60px;
+  width: 48px;
+  height: 48px;
+  background: #FFFFFF;
 }

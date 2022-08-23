@@ -32,4 +32,8 @@ export class DocumentComponent implements OnInit {
     this.router.navigateByUrl( '/dashboard/home' );
   };
 
+  handleAllDocuments() {
+    this.router.navigateByUrl( '/dashboard/document-list' );
+  }
+
 }
