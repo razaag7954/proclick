@@ -22,12 +22,16 @@
     margin-right: 20px;
 }
 .profile-name {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
     font-weight: 300;
     font-size: 14px;
     line-height: 21px;
     color: #000000;
 }
 .profile-email {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
     font-weight: 300;
     font-size: 14px;
     line-height: 21px;
@@ -62,6 +66,8 @@
 }
 .profile-dd-item {
     background-color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
     color: #FFFFFF;
     font-weight: 500;
     font-size: 14px;

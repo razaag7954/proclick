@@ -10,7 +10,18 @@
 .right-tile-container {
     align-items: flex-end;
 }
+.profile-role {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.005em;
+    color: #000000;
+}
 .profile-button {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
@@ -34,6 +45,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 16px;
@@ -41,12 +54,16 @@
     color: #FFFFFF;
 }
 .osha-text {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     color: #000000;
 }
 .osha-expiration {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;

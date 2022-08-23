@@ -1,19 +1,10 @@
 .container {
     margin-top: 20px;
 }
-/* .ng-select-container {
-    height: 48px;
-    padding: 10px;
-    background: #FFFFFF;
-    border: 1px solid #000000;
-    border-radius: 6px;
-} */
-
-
 .errosContainer {
     display: flex;
     justify-content: space-between;
 }
-.error{
+.error {
     color: red;
 }

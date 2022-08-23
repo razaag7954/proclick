@@ -15,7 +15,7 @@ input:-webkit-autofill {
     background: #FFFFFF;
 }
 .myInputField {
-    /* font-family: 'Poppins'; */
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 14px;
