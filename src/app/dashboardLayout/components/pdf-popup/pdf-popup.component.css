@@ -10,6 +10,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    padding: 20px;
 }
 .popup-header-icon {
     width: 40px;
