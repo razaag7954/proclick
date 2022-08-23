@@ -15,10 +15,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
 import { CodeInputModule } from 'angular-code-input';
 import { SelectComponent } from '../components/select/select.component';
 import { NgSelectModule } from '@ng-select/ng-select';
-
 
 @NgModule({
   declarations: [
@@ -50,6 +50,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     CodeInputModule,
     SelectComponent,
     MatGridListModule,
+    MatDialogModule,
     NgSelectModule
   ],
   imports: [
@@ -63,6 +64,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     MatDividerModule,
     MatListModule,
     MatGridListModule,
+    MatDialogModule,
     CodeInputModule,
     NgSelectModule
   ]

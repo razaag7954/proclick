@@ -55,3 +55,8 @@ a {
   border: 1px solid #000000 !important;
   border-radius: 6px;
 } */
+
+.image-modal-container .mat-dialog-container {
+  padding: 0;
+  overflow: hidden;
+}

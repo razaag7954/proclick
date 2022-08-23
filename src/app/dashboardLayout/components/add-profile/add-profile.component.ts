@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { ImagePopupComponent } from '../image-popup/image-popup.component';
 @Component( {
   selector: 'app-add-profile',
   templateUrl: './add-profile.component.html',
@@ -11,7 +13,11 @@ export class AddProfileComponent implements OnInit {
 
   formData!: FormGroup;
   
-  constructor( private router: Router ) { }
+  constructor( private router: Router, private dialogRef: MatDialog ) { }
+
+  openDialog(){
+    this.dialogRef.open( ImagePopupComponent, { panelClass: 'image-modal-container' } );
+  }
 
   ngOnInit(): void {
     this.createForm();
