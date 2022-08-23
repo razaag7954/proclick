@@ -60,3 +60,6 @@ a {
   padding: 0;
   overflow: hidden;
 }
+.pdf-dialog .mat-dialog-container {
+  padding: 20px;
+}

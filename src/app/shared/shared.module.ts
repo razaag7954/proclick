@@ -19,6 +19,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CodeInputModule } from 'angular-code-input';
 import { SelectComponent } from '../components/select/select.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     SelectComponent,
     MatGridListModule,
     MatDialogModule,
-    NgSelectModule
+    NgSelectModule,
+    PdfViewerModule
   ],
   imports: [
     CommonModule,
@@ -66,7 +68,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     MatGridListModule,
     MatDialogModule,
     CodeInputModule,
-    NgSelectModule
+    NgSelectModule,
+    PdfViewerModule
   ]
 })
 export class SharedModule { }

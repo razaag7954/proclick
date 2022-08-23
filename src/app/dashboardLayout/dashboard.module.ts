@@ -13,6 +13,7 @@ import { SitesComponent } from './components/sites/sites.component';
 import { DashboardComponent } from './dashboard.component';
 import { AddProfileComponent } from './components/add-profile/add-profile.component';
 import { ImagePopupComponent } from './components/image-popup/image-popup.component';
+import { PdfPopupComponent } from './components/pdf-popup/pdf-popup.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ImagePopupComponent } from './components/image-popup/image-popup.compon
     HomeComponent,
     AddProfileComponent,
     ImagePopupComponent,
+    PdfPopupComponent,
   ],
   imports: [
     CommonModule,

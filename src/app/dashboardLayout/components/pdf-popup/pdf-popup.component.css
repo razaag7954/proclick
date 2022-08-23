@@ -1,0 +1,18 @@
+.pdf-popup-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.pdf-popup-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+.popup-header-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}

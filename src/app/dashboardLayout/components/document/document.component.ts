@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { PdfPopupComponent } from '../pdf-popup/pdf-popup.component';
 @Component({
   selector: 'app-document',
   templateUrl: './document.component.html',
@@ -10,7 +12,11 @@ export class DocumentComponent implements OnInit {
 
   formData!: FormGroup;
   
-  constructor( private router: Router ) { }
+  constructor( private router: Router, private dialogRef: MatDialog ) { }
+
+  openDialog() {
+    this.dialogRef.open( PdfPopupComponent, { width: '80vw', height: '80vh', panelClass: 'pdf-dialog' } );
+  }
 
   ngOnInit(): void {
     this.createForm();
