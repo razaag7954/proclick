@@ -1,0 +1,100 @@
+<div class="myDataTable">
+    <div class="tableHeader">
+        <div class="header">
+            Documents
+        </div>
+        <div class="filteration">
+            <mat-form-field class="filterationForm">
+                <input matInput (keyup)="FilterChange($event)"/>
+                <svg class="searchIcon" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0 5.92308C0 2.65185 2.65185 0 5.92308 0C9.1943 0 11.8462 2.65185 11.8462 5.92308C11.8462 7.36481 11.331 8.68623 10.4748 9.71334L13.8423 13.0808C14.0526 13.2911 14.0526 13.632 13.8423 13.8423C13.632 14.0526 13.2911 14.0526 13.0808 13.8423L9.71334 10.4748C8.68623 11.331 7.36481 11.8462 5.92308 11.8462C2.65185 11.8462 0 9.1943 0 5.92308ZM9.39012 9.30906C9.37539 9.32097 9.36115 9.33377 9.34746 9.34746C9.33377 9.36115 9.32097 9.37539 9.30906 9.39012C8.43549 10.2434 7.24069 10.7692 5.92308 10.7692C3.24662 10.7692 1.07692 8.59953 1.07692 5.92308C1.07692 3.24662 3.24662 1.07692 5.92308 1.07692C8.59953 1.07692 10.7692 3.24662 10.7692 5.92308C10.7692 7.24069 10.2434 8.43549 9.39012 9.30906Z"
+                        fill="#9E9E9E" />
+                </svg>
+            </mat-form-field>
+            <div class="print-btn-container">
+                <button class="print-btn">
+                    <div class="btn-content">
+                        <span>print</span>
+                        <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.9998 2.04995C2.9998 1.69191 3.14204 1.34853 3.39521 1.09536C3.64838 0.842183 3.99176 0.699951 4.3498 0.699951H10.6498C11.0078 0.699951 11.3512 0.842183 11.6044 1.09536C11.8576 1.34853 11.9998 1.69191 11.9998 2.04995V2.49995H12.4498C13.0465 2.49995 13.6188 2.737 14.0408 3.15896C14.4628 3.58092 14.6998 4.15321 14.6998 4.74995V9.24995C14.6998 9.60799 14.5576 9.95137 14.3044 10.2045C14.0512 10.4577 13.7078 10.6 13.3498 10.6H11.9998V11.95C11.9998 12.308 11.8576 12.6514 11.6044 12.9045C11.3512 13.1577 11.0078 13.3 10.6498 13.3H4.3498C3.99176 13.3 3.64838 13.1577 3.39521 12.9045C3.14204 12.6514 2.9998 12.308 2.9998 11.95V10.6H1.6498C1.29176 10.6 0.948385 10.4577 0.695211 10.2045C0.442036 9.95137 0.299805 9.60799 0.299805 9.24995V4.74995C0.299805 4.15321 0.536858 3.58092 0.958814 3.15896C1.38077 2.737 1.95307 2.49995 2.5498 2.49995H2.9998V2.04995ZM3.8998 2.49995H11.0998V2.04995C11.0998 1.9306 11.0524 1.81614 10.968 1.73175C10.8836 1.64736 10.7692 1.59995 10.6498 1.59995H4.3498C4.23046 1.59995 4.116 1.64736 4.03161 1.73175C3.94722 1.81614 3.8998 1.9306 3.8998 2.04995V2.49995ZM2.9998 9.69995V8.34995C2.9998 7.99191 3.14204 7.64853 3.39521 7.39536C3.64838 7.14218 3.99176 6.99995 4.3498 6.99995H10.6498C11.0078 6.99995 11.3512 7.14218 11.6044 7.39536C11.8576 7.64853 11.9998 7.99191 11.9998 8.34995V9.69995H13.3498C13.4692 9.69995 13.5836 9.65254 13.668 9.56815C13.7524 9.48376 13.7998 9.3693 13.7998 9.24995V4.74995C13.7998 4.39191 13.6576 4.04853 13.4044 3.79536C13.1512 3.54218 12.8078 3.39995 12.4498 3.39995H2.5498C2.19176 3.39995 1.84838 3.54218 1.59521 3.79536C1.34204 4.04853 1.1998 4.39191 1.1998 4.74995V9.24995C1.1998 9.3693 1.24722 9.48376 1.33161 9.56815C1.416 9.65254 1.53046 9.69995 1.6498 9.69995H2.9998ZM4.3498 7.89995C4.23046 7.89995 4.116 7.94736 4.03161 8.03175C3.94722 8.11614 3.8998 8.2306 3.8998 8.34995V11.95C3.8998 12.0693 3.94722 12.1838 4.03161 12.2682C4.116 12.3525 4.23046 12.4 4.3498 12.4H10.6498C10.7692 12.4 10.8836 12.3525 10.968 12.2682C11.0524 12.1838 11.0998 12.0693 11.0998 11.95V8.34995C11.0998 8.2306 11.0524 8.11614 10.968 8.03175C10.8836 7.94736 10.7692 7.89995 10.6498 7.89995H4.3498Z"
+                                fill="white" />
+                        </svg>
+
+                    </div>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- table -->
+    <div class="mat-elevation-z8">
+
+        <table mat-table [dataSource]="dataSource" class="myDatable">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+
+            <!-- firstColumn -->
+            <ng-container matColumnDef="checkbox">
+                <th mat-header-cell *matHeaderCellDef class="checkboxColumn colHeader">
+                    <input type="checkbox" class="myCheckbox">
+                </th>
+                <td mat-cell *matCellDef="let element" class="checkboxColumn colData">
+                    <input type="checkbox" class="myCheckbox">
+                </td>
+            </ng-container>
+            <!-- Name Column -->
+            <ng-container matColumnDef="docName">
+                <th mat-header-cell *matHeaderCellDef class="colHeader"> Doc Name </th>
+                <td mat-cell *matCellDef="let element" class="colData"> {{element.docName}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="workerName">
+                <th mat-header-cell *matHeaderCellDef class="colHeader"> Weight </th>
+                <td mat-cell *matCellDef="let element" class="colData"> {{element.workerName}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="subName">
+                <th mat-header-cell *matHeaderCellDef class="colHeader"> Symbol </th>
+                <td mat-cell *matCellDef="let element" class="colData"> {{element.subName}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="signatureStatus">
+                <th mat-header-cell *matHeaderCellDef class="colHeader"> Symbol </th>
+                <td mat-cell *matCellDef="let element" class="colData"> {{element.signatureStatus}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="docType">
+                <th mat-header-cell *matHeaderCellDef class="colHeader"> Symbol </th>
+                <td mat-cell *matCellDef="let element" class="colData"> {{element.docType}} </td>
+            </ng-container>
+            <!-- Resend Action -->
+            <ng-container matColumnDef="resend">
+                <th mat-header-cell *matHeaderCellDef class="actionColumn colHeader"> Resend </th>
+                <td mat-cell *matCellDef="let element" (click)="resend(element)" class="actionColumn colData">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.8722 0.127759C13.9327 0.188425 13.9741 0.265549 13.9913 0.349552C14.0084 0.433554 14.0004 0.520733 13.9684 0.600259L8.87679 13.3289C8.83191 13.441 8.75699 13.5385 8.66025 13.6108C8.56351 13.683 8.44872 13.7272 8.3285 13.7384C8.20827 13.7496 8.08729 13.7275 7.97886 13.6744C7.87042 13.6212 7.77874 13.5392 7.71391 13.4374L4.93316 9.06676L0.562535 6.28601C0.460438 6.22124 0.378217 6.12953 0.324946 6.021C0.271674 5.91246 0.249423 5.79131 0.260647 5.67093C0.27187 5.55055 0.316133 5.4356 0.388551 5.33878C0.460968 5.24196 0.558725 5.16703 0.671035 5.12226L13.3997 0.032384C13.4792 0.000369703 13.5664 -0.00757505 13.6504 0.0095366C13.7344 0.0266483 13.8115 0.0680622 13.8722 0.128634V0.127759ZM5.80641 8.81126L8.22228 12.607L12.3637 2.25401L5.80641 8.81126ZM11.745 1.63538L1.39203 5.77676L5.18866 8.19176L11.7459 1.63538H11.745Z"
+                            fill="#898989" />
+                    </svg>
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+        <mat-paginator [pageSizeOptions]="[5,10,15]" class="myDataTablePagination">
+            <div>
+                mypagination
+            </div>
+        </mat-paginator>
+    </div>
+</div>

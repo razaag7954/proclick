@@ -17,7 +17,12 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { CodeInputModule } from 'angular-code-input';
 import { SelectComponent } from '../components/select/select.component';
 import { NgSelectModule } from '@ng-select/ng-select';
-
+import { DatatableComponent } from '../components/datatable/datatable.component';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -27,7 +32,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     AuthScreenHeaderComponent,
     AuthScreenFooterComponent,
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    DatatableComponent
   ],
   exports:[
     ButtonComponent,
@@ -47,7 +53,14 @@ import { NgSelectModule } from '@ng-select/ng-select';
     CodeInputModule,
     SelectComponent,
     MatGridListModule,
-    NgSelectModule
+    NgSelectModule,
+    DatatableComponent,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
+
   ],
   imports: [
     CommonModule,
@@ -61,7 +74,12 @@ import { NgSelectModule } from '@ng-select/ng-select';
     MatListModule,
     MatGridListModule,
     CodeInputModule,
-    NgSelectModule
+    NgSelectModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 export class SharedModule { }

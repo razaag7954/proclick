@@ -14,6 +14,7 @@ import { SitesComponent } from './dashboardLayout/components/sites/sites.compone
 import { DashboardComponent } from './dashboardLayout/dashboard.component';
 import { HomeComponent } from './dashboardLayout/components/home/home.component';
 import { AddProfileComponent } from './dashboardLayout/components/add-profile/add-profile.component';
+import { ListofdocumentComponent } from './dashboardLayout/components/listofdocument/listofdocument.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'auth/login', pathMatch: 'full'},
@@ -37,6 +38,7 @@ const routes: Routes = [
       { path: 'profile', component: ProfileComponent },
       { path: 'addProfile', component: AddProfileComponent },
       { path: 'sites', component: SitesComponent },
+      { path: 'document-list', component: ListofdocumentComponent }
     ]
   },
 ];
