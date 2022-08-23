@@ -6,6 +6,7 @@ import { AuthScreenFormContainerComponent } from '../components/auth-screen-form
 import { AuthScreenHeaderComponent } from '../components/auth-screen-header/auth-screen-header.component';
 import { AuthScreenFooterComponent } from '../components/auth-screen-footer/auth-screen-footer.component';
 import { InputComponent } from '../components/input/input.component';
+import { DividerComponent } from '../components/divider/divider.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -27,6 +28,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     AuthScreenHeaderComponent,
     AuthScreenFooterComponent,
     InputComponent,
+    DividerComponent,
     SelectComponent
   ],
   exports:[
@@ -36,6 +38,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
     AuthScreenHeaderComponent,
     AuthScreenFooterComponent,
     InputComponent,
+    DividerComponent,
     FormsModule,
     ReactiveFormsModule,
     MatSidenavModule,

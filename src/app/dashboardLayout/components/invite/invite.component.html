@@ -1,25 +1,29 @@
 <AuthScreenContainer>
-    <AuthScreenHeader header="Enter Details" description="Nulla porttitor accumsan tincidunt. 
-             Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat,
-             accumsan id imperdiet et, ">
+    <AuthScreenHeader 
+        header="Enter Details" 
+        description="Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat, accumsan id imperdiet et, "
+    >
     </AuthScreenHeader>
     <formContainer>
         <form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
-            <app-input placeholder="First Name" type="text" [required]="true"
-                [control]="$any(formData.get('firstName'))">
+            <app-input placeholder="First Name" type="text" [required]="true" [control]="$any(formData.get('firstName'))">
                 <mat-icon>account_circle</mat-icon>
             </app-input>
+            <app-divider></app-divider>
             <app-input placeholder="Last Name" type="text" [required]="true" [control]="$any(formData.get('lastName'))">
                 <mat-icon>account_circle</mat-icon>
             </app-input>
+            <app-divider></app-divider>
             <app-input placeholder="Email" type="email" [required]="true" [control]="$any(formData.get('email'))">
                 <mat-icon> mail_outline</mat-icon>
             </app-input>
-            <MySelectComponent [options]="profileType" placeholder="Profile Type"
-                [control]="$any(formData.get('profileType'))">
+            <app-divider></app-divider>
+            <MySelectComponent [options]="profileType" placeholder="Profile Type" [control]="$any(formData.get('profileType'))">
             </MySelectComponent>
+            <app-divider></app-divider>
             <MySelectComponent [options]="ohsaType" placeholder="OSHA Type" [control]="$any(formData.get('oshaType'))">
             </MySelectComponent>
+            <app-divider></app-divider>
             <div class="spacer"></div>
             <my-button text="Invite" [isDisabled]="formData.invalid" type="submit">
             </my-button>

@@ -32,9 +32,6 @@
     background-color: #000000;
     cursor: pointer;
 }
-.divider {
-    height: 20px;
-}
 .file-upload-container {
     width: 255px;
     height: 255px;

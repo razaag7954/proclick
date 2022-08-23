@@ -20,7 +20,6 @@ import { SharedModule } from './shared/shared.module';
     DashboardModule,
     SharedModule
   ],
-  
   providers: [],
   bootstrap: [AppComponent]
 })

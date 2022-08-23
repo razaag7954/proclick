@@ -4,9 +4,9 @@
     </AuthScreenHeader>
     <formContainer>
         <form [formGroup]="formData" (ngSubmit)="onSubmit(formData)">
-            <code-input [isCodeHidden]="true" [codeLength]="5" (codeChanged)="onCodeChanged($event)"
-                (codeCompleted)="onCodeCompleted($event)">
+            <code-input [isCodeHidden]="true" [codeLength]="5" (codeChanged)="onCodeChanged($event)" (codeCompleted)="onCodeCompleted($event)">
             </code-input>
+            <app-divider></app-divider>
             <my-button text="Submit" [isDisabled]="isButtonDisable" type="submit">
             </my-button>
         </form>

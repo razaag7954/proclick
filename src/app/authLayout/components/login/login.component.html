@@ -1,27 +1,24 @@
 <AuthScreenContainer>
    <AuthScreenHeader
        header="Login"
-       description="Nulla porttitor accumsan tincidunt. 
-            Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat,
-            accumsan id imperdiet et, "
-       >
+       description="Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat, accumsan id imperdiet et, "
+    >
    </AuthScreenHeader>
   <formContainer>
    <form [formGroup]="formData" (ngSubmit)="onSubmit(formData.value)">
-       <app-input placeholder="Email" type="email" [required]="true"
-           [control]="$any(formData.get('email'))">
-           <mat-icon> mail_outline</mat-icon>
-       </app-input>
-
-       <app-input placeholder="Password" type="Password" [required]="true"
-           [control]="$any(formData.get('password'))">
-           <mat-icon>visibility</mat-icon>
-       </app-input>
-       <AuthScreenFooter rightText="Forget Password" link="auth/forgetpassword">
-          Have you not account <b><a href="auth/signup">SignUp</a></b>
+        <app-input placeholder="Email" type="email" [required]="true" [control]="$any(formData.get('email'))">
+            <mat-icon> mail_outline</mat-icon>
+        </app-input>
+        <app-divider></app-divider>
+        <app-input placeholder="Password" type="Password" [required]="true" [control]="$any(formData.get('password'))">
+            <mat-icon>visibility</mat-icon>
+        </app-input>
+        <app-divider></app-divider>
+        <AuthScreenFooter rightText="Forget Password" link="auth/forgetpassword">
+            Have you not account <b><a href="auth/signup">SignUp</a></b>
         </AuthScreenFooter>
-       <my-button text="LogIn" [isDisabled]="formData.invalid" type="submit">
-       </my-button>
+        <app-divider></app-divider>
+        <my-button text="LogIn" [isDisabled]="formData.invalid" type="submit"></my-button>
    </form>
   </formContainer>
 </AuthScreenContainer>
