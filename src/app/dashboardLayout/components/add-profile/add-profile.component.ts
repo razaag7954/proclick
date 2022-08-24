@@ -35,7 +35,8 @@ export class AddProfileComponent implements OnInit {
       state: new FormControl( '', [ Validators.required ] ),
       country: new FormControl( '', [ Validators.required ] ),
       phoneNumber: new FormControl( '', [ Validators.required ] ),
-      profileType: new FormControl( '', [ Validators.required ] )
+      profileType: new FormControl( '', [ Validators.required ] ),
+      oshaType: new FormControl( '', [ Validators.required ] )
     } );
   };
 
