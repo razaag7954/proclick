@@ -15,6 +15,8 @@ import { ReportsComponent } from './components/reports/reports.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { SitesComponent } from './components/sites/sites.component';
 import { DashboardComponent } from './dashboard.component';
+import { ListofprofileComponent } from './components/listofprofile/listofprofile.component';
+import { ListofsitesComponent } from './components/listofsites/listofsites.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { DashboardComponent } from './dashboard.component';
     ImagePopupComponent,
     PdfPopupComponent,
     ListofdocumentComponent,
+    ListofprofileComponent,
+    ListofsitesComponent,
   ],
   imports: [
     CommonModule,
