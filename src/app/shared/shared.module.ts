@@ -14,6 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { RouterModule } from '@angular/router';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { CodeInputModule } from 'angular-code-input';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
@@ -38,6 +39,7 @@ import { SelectComponent } from '../components/select/select.component';
     SelectComponent
   ],
   exports:[
+    RouterModule,
     ButtonComponent,
     AuthScreenContainerComponent,
     AuthScreenFormContainerComponent,
@@ -67,6 +69,7 @@ import { SelectComponent } from '../components/select/select.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     FormsModule,
     ReactiveFormsModule,
     MatSidenavModule,
@@ -84,7 +87,8 @@ import { SelectComponent } from '../components/select/select.component';
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+
   ]
 })
 export class SharedModule { }

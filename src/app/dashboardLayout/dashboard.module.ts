@@ -15,6 +15,8 @@ import { ReportsComponent } from './components/reports/reports.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { SitesComponent } from './components/sites/sites.component';
 import { DashboardComponent } from './dashboard.component';
+import { ListofprofileComponent } from './components/listofprofile/listofprofile.component';
+import { ListofsitesComponent } from './components/listofsites/listofsites.component';
 import { AddSitePopupComponent } from './components/add-site-popup/add-site-popup.component';
 import { AddBulkProfilePopupComponent } from './components/add-bulk-profile-popup/add-bulk-profile-popup.component';
 
@@ -33,6 +35,8 @@ import { AddBulkProfilePopupComponent } from './components/add-bulk-profile-popu
     ImagePopupComponent,
     PdfPopupComponent,
     ListofdocumentComponent,
+    ListofprofileComponent,
+    ListofsitesComponent,
     AddSitePopupComponent,
     AddBulkProfilePopupComponent,
   ],

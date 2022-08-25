@@ -1,0 +1,69 @@
+.add-profile-btn-container {
+    width: 148px;
+    height: 48px;
+    margin-left: 3px;
+}
+
+.add-bulk-btn-container {
+    width: 134px;
+    height: 48px;
+}
+
+.add-btn {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 16px 12px;
+}
+
+.add-btn span {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+}
+
+.add-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.anker a {
+    text-decoration-line: underline;
+    color: #316BFF;
+}
+
+.assign-btn-container {
+    width: 100px;
+    height: 25px;
+}
+
+.assign-btn {
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    /* font-family: 'IBM Plex Mono'; */
+    font-style: normal;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 16px;
+    border: unset;
+}
+.delete-btn-container {
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.document {
+    cursor: pointer;
+}

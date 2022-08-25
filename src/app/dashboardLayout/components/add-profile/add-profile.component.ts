@@ -54,7 +54,9 @@ export class AddProfileComponent implements OnInit {
   onSubmit( form: any ) {
     this.router.navigateByUrl( '/dashboard/home' );
   };
-
+  goToListOfProfile() {
+    this.router.navigateByUrl( '/dashboard/profile' );
+  }
   profileType = [
     { id: 1, name: 'Pm Super' },
     { id: 2, name: 'GC' },

@@ -39,7 +39,7 @@
         <div class='tile-container right-tile-container'>
             <div class='add-profile-form-container'>
                 <div class='view-profile-button-container'>
-                    <button class='profile-button'>View All Profiles</button>
+                    <button class='profile-button' (click)="goToListOfProfile()">View All Profiles</button>
                 </div>
                 <app-divider></app-divider>
                 <form [formGroup]='formData' (ngSubmit)='onSubmit(formData.value)'>

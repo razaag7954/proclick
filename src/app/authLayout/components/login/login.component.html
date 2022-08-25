@@ -14,8 +14,8 @@
             <mat-icon>visibility</mat-icon>
         </app-input>
         <app-divider></app-divider>
-        <AuthScreenFooter rightText="Forget Password" link="auth/forgetpassword">
-            Have you not account <b><a href="auth/signup">SignUp</a></b>
+        <AuthScreenFooter rightText="Forget Password" link="/auth/forgetpassword">
+            Have you not account <b><a routerLink="/auth/signup">SignUp</a></b>
         </AuthScreenFooter>
         <app-divider></app-divider>
         <my-button text="LogIn" [isDisabled]="formData.invalid" type="submit"></my-button>
