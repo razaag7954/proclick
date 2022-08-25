@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 export interface PeriodicElement {
   id: number;
   docName: string;
@@ -41,7 +42,7 @@ export class ListofdocumentComponent implements OnInit {
   displayedColumns: string[] = ['checkbox', 'docName', 'workerName', 'subName', 'signatureStatus','docType', 'resend'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -58,6 +59,10 @@ export class ListofdocumentComponent implements OnInit {
   resend(row: any){
     console.log("resend function call");
     
+  }
+
+  goToPorfile(){
+    this.router.navigateByUrl( '/dashboard/profile' );
   }
 
 }

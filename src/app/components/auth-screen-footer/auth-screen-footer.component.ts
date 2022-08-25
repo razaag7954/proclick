@@ -7,8 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AuthScreenFooterComponent implements OnInit {
   @Input() rightText: string = ''
-  @Input() link: string = '#'
-  @Input() isPadding:boolean = false;
+  @Input() link: any = '#'
   constructor() { }
 
   ngOnInit(): void {
