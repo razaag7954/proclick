@@ -12,7 +12,7 @@
             >
             </AuthScreenHeader>
             <formContainer>
-                <div class='dropzone' appDnd (fileDropped)='onFileDropped($event)'>
+                <div class='dropzone' (fileDropped)='onFileDropped($event)'>
                     <input id='fileDropRef' #fileDropRef type='file' multiple (change)='fileBrowseHandler($event)' title='' />
                     <label for='fileDropRef'>Upload from PC</label>
                     <app-divider></app-divider>
