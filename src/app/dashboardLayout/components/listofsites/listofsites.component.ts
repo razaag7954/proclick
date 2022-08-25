@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { AddSitePopupComponent } from '../add-site-popup/add-site-popup.component';
 export interface PeriodicElement {
   id: number;
   siteAddress: string;
@@ -42,7 +44,11 @@ export class ListofsitesComponent implements OnInit {
   displayedColumns: string[] = ['checkbox', 'siteAddress', 'addUsers','subAttached','workerAttached','docSigned','docSignedForSub','delete'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  constructor( private router: Router) { }
+  constructor( private router: Router, private dialogRef: MatDialog ) { }
+
+  openDialog() {
+    this.dialogRef.open( AddSitePopupComponent, { width: '900px', height: 'auto', panelClass: 'add-site-modal-container' } );
+  };
 
   ngOnInit(): void {
   }

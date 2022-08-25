@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { AddBulkProfilePopupComponent } from '../add-bulk-profile-popup/add-bulk-profile-popup.component';
 export interface PeriodicElement {
   id: number;
   name: string;
@@ -40,7 +42,11 @@ export class ListofprofileComponent implements OnInit {
   displayedColumns: string[] = ['checkbox', 'name', 'oshano','profileType','remove'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  constructor( private router: Router) { }
+  constructor( private router: Router, private dialogRef: MatDialog ) { }
+
+  openDialog() {
+    this.dialogRef.open( AddBulkProfilePopupComponent, { width: '900px', height: 'auto', panelClass: 'add-bulk-profile-modal-container' } )
+  };
 
   ngOnInit(): void {
   }

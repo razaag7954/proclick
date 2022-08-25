@@ -20,8 +20,8 @@
                 <MySelectComponent [options]='ohsaType' placeholder='OSHA Type' [control]="$any(formData.get('oshaType'))"></MySelectComponent>
                 <app-divider></app-divider>
                 <div class='upload-buttons-container'>
-                    <button class='profile-button' (click)='openAddSitePopup()'>Upload Photo ID</button>
-                    <button class='profile-button' (click)='openAddBulkProfileDialog()'>Upload OSHA Card</button>
+                    <button class='profile-button' (click)="openDialog()">Upload Photo ID</button>
+                    <button class='profile-button'>Upload OSHA Card</button>
                 </div>
                 <app-divider></app-divider>
                 <button class='profile-button orientation-button' (click)="openDialog()">

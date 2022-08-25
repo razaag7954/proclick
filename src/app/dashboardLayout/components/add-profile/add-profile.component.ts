@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-import { AddBulkProfilePopupComponent } from '../add-bulk-profile-popup/add-bulk-profile-popup.component';
-import { AddSitePopupComponent } from '../add-site-popup/add-site-popup.component';
 import { ImagePopupComponent } from '../image-popup/image-popup.component';
 @Component( {
   selector: 'app-add-profile',
@@ -19,14 +17,6 @@ export class AddProfileComponent implements OnInit {
 
   openDialog() {
     this.dialogRef.open( ImagePopupComponent, { panelClass: 'image-modal-container' } );
-  };
-
-  openAddSitePopup() {
-    this.dialogRef.open( AddSitePopupComponent, { width: '900px', height: 'auto', panelClass: 'add-site-modal-container' } );
-  };
-
-  openAddBulkProfileDialog() {
-    this.dialogRef.open( AddBulkProfilePopupComponent, { width: '900px', height: 'auto', panelClass: 'add-bulk-profile-modal-container' } )
   };
 
   ngOnInit(): void {

@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
+import { PdfPopupComponent } from '../pdf-popup/pdf-popup.component';
 export interface PeriodicElement {
   id: number;
   docName: string;
@@ -42,7 +44,11 @@ export class ListofdocumentComponent implements OnInit {
   displayedColumns: string[] = ['checkbox', 'docName', 'workerName', 'subName', 'signatureStatus','docType', 'resend'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  constructor( private router: Router) { }
+  constructor( private router: Router, private dialogRef: MatDialog ) { }
+
+  openDialog() {
+    this.dialogRef.open( PdfPopupComponent, { width: '80vw', height: '80vh', panelClass: 'pdf-dialog' } );
+  }
 
   ngOnInit(): void {
   }
