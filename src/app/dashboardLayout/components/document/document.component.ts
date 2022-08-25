@@ -34,6 +34,11 @@ export class DocumentComponent implements OnInit {
 
   handleAllDocuments() {
     this.router.navigateByUrl( '/dashboard/document-list' );
-  }
+  };
+
+  docTypes = [
+    { id: 1, name: 'Onboarding' },
+    { id: 2, name: 'Safety Meeting' },
+  ];
 
 }

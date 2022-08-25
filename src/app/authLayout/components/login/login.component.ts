@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form: any){
-    console.log(form);
     this.router.navigateByUrl('/dashboard/home');
   }
 

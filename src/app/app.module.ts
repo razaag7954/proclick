@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './authLayout/auth.module';
 import { DashboardModule } from './dashboardLayout/dashboard.module';
 import { SharedModule } from './shared/shared.module';
+import { DndDirective } from './directives/dnd.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DndDirective,
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,8 @@ import { AddProfileComponent } from './components/add-profile/add-profile.compon
 import { ImagePopupComponent } from './components/image-popup/image-popup.component';
 import { PdfPopupComponent } from './components/pdf-popup/pdf-popup.component';
 import { ListofdocumentComponent } from './components/listofdocument/listofdocument.component';
+import { AddSitePopupComponent } from './components/add-site-popup/add-site-popup.component';
+import { AddBulkProfilePopupComponent } from './components/add-bulk-profile-popup/add-bulk-profile-popup.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { ListofdocumentComponent } from './components/listofdocument/listofdocum
     ImagePopupComponent,
     PdfPopupComponent,
     ListofdocumentComponent,
+    AddSitePopupComponent,
+    AddBulkProfilePopupComponent,
   ],
   imports: [
     CommonModule,
