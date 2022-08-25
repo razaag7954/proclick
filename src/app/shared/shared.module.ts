@@ -1,31 +1,30 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from '../components/button/button.component';
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { NgSelectModule } from '@ng-select/ng-select';
+import { CodeInputModule } from 'angular-code-input';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { AuthScreenContainerComponent } from '../components/auth-screen-container/auth-screen-container.component';
+import { AuthScreenFooterComponent } from '../components/auth-screen-footer/auth-screen-footer.component';
 import { AuthScreenFormContainerComponent } from '../components/auth-screen-form-container/auth-screen-form-container.component';
 import { AuthScreenHeaderComponent } from '../components/auth-screen-header/auth-screen-header.component';
-import { AuthScreenFooterComponent } from '../components/auth-screen-footer/auth-screen-footer.component';
-import { InputComponent } from '../components/input/input.component';
+import { ButtonComponent } from '../components/button/button.component';
 import { DividerComponent } from '../components/divider/divider.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatListModule } from '@angular/material/list';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatDialogModule } from '@angular/material/dialog';
-import { CodeInputModule } from 'angular-code-input';
+import { InputComponent } from '../components/input/input.component';
 import { SelectComponent } from '../components/select/select.component';
-import { NgSelectModule } from '@ng-select/ng-select';
-import { PdfViewerModule } from 'ng2-pdf-viewer';
-import { DatatableComponent } from '../components/datatable/datatable.component';
-import {MatTableModule} from '@angular/material/table';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatSortModule } from '@angular/material/sort';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -36,8 +35,7 @@ import { MatInputModule } from '@angular/material/input';
     AuthScreenFooterComponent,
     InputComponent,
     DividerComponent,
-    SelectComponent,
-    DatatableComponent
+    SelectComponent
   ],
   exports:[
     ButtonComponent,
@@ -61,7 +59,6 @@ import { MatInputModule } from '@angular/material/input';
     MatDialogModule,
     NgSelectModule,
     PdfViewerModule,
-    DatatableComponent,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
