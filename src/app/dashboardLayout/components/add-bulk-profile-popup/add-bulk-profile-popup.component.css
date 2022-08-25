@@ -41,6 +41,9 @@
     position: relative;
     z-index: 1;
 }
+.drag-active {
+    background: red; 
+}
 .dropzone input {
     width: 100%;
     height: 100%;
@@ -63,10 +66,13 @@
     padding: 0.5rem;
     justify-content: space-between;
     align-items: center;
-    border: dashed 1px #979797;
+    border: 1px solid #000000;
     margin-bottom: 1rem;
     display: flex;
     flex-grow: 1;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    user-select: none;
 }
 .files-list .single-file .delete {
     display: flex;
@@ -79,6 +85,7 @@
     font-weight: 500;
     color: #353f4a;
     margin: 0;
+    text-align: left;
 }
 .files-list .single-file .size {
     font-size: 12px;
@@ -86,6 +93,7 @@
     color: #a4a4a4;
     margin: 0;
     margin-bottom: 0.25rem;
+    text-align: left;
 }
 .files-list .single-file .info {
     width: 100%
