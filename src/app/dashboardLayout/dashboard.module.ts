@@ -15,6 +15,8 @@ import { ReportsComponent } from './components/reports/reports.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { SitesComponent } from './components/sites/sites.component';
 import { DashboardComponent } from './dashboard.component';
+import { AddSitePopupComponent } from './components/add-site-popup/add-site-popup.component';
+import { AddBulkProfilePopupComponent } from './components/add-bulk-profile-popup/add-bulk-profile-popup.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { DashboardComponent } from './dashboard.component';
     ImagePopupComponent,
     PdfPopupComponent,
     ListofdocumentComponent,
+    AddSitePopupComponent,
+    AddBulkProfilePopupComponent,
   ],
   imports: [
     CommonModule,
