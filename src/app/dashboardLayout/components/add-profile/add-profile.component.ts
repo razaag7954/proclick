@@ -10,8 +10,39 @@ import { ImagePopupComponent } from '../image-popup/image-popup.component';
 } )
 
 export class AddProfileComponent implements OnInit {
-
+  OSHANumFormData!: FormGroup;
+  OSHAExpFormData!: FormGroup;
   formData!: FormGroup;
+
+  showOSHANum: boolean = false;
+  showOSHAExp: boolean = false;
+  
+  photoID: string = '';
+  OSHACard: string = '';
+
+  handleGetPhotoID( event: any ) {
+    this.photoID = URL.createObjectURL( event.target.files[ 0 ] );
+  };
+
+  handleGetOSHACard( event: any ) {
+    this.OSHACard = URL.createObjectURL( event.target.files[ 0 ] );
+  };
+
+  toggleShowOSHANum() {
+    if ( this.showOSHANum ) {
+      this.showOSHANum = false;
+    } else {
+      this.showOSHANum = true;
+    }
+  };
+
+  toggleShowOSHAExp() {
+    if ( this.showOSHAExp ) {
+      this.showOSHAExp = false;
+    } else {
+      this.showOSHAExp = true;
+    }
+  };
   
   constructor( private router: Router, private dialogRef: MatDialog ) { }
 
@@ -20,7 +51,21 @@ export class AddProfileComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    this.createOSHANumForm();
+    this.createOSHAExpForm();
     this.createForm();
+  };
+
+  createOSHANumForm() {
+    this.OSHANumFormData = new FormGroup( {
+      OSHANumber: new FormControl( 'ABCS0245', [ Validators.required ] ),
+    } );
+  };
+
+  createOSHAExpForm() {
+    this.OSHAExpFormData = new FormGroup( {
+      OSHAExpiration: new FormControl( '2022-01-01', [ Validators.required ] ),
+    } );
   };
 
   createForm() {
@@ -39,6 +84,14 @@ export class AddProfileComponent implements OnInit {
       profileType: new FormControl( '', [ Validators.required ] ),
       oshaType: new FormControl( '', [ Validators.required ] )
     } );
+  };
+
+  onOSHANumSubmit( form: any ) {
+    this.toggleShowOSHANum();
+  };
+
+  onOSHAExpSubmit( form: any ) {
+    this.toggleShowOSHAExp();
   };
 
   onSubmit( form: any ) {
