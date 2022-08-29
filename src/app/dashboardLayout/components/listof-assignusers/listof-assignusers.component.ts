@@ -4,7 +4,6 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { AddSitePopupComponent } from '../add-site-popup/add-site-popup.component';
-import { EditSiteModalComponent } from '../edit-site-modal/edit-site-modal.component';
 export interface PeriodicElement {
   id: number;
   name: string;
@@ -40,7 +39,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./listof-assignusers.component.css']
 })
 export class ListofAssignusersComponent implements OnInit {
-  displayedColumns: string[] = ['checkbox', 'siteAddress', 'addUsers','subAttached','workerAttached','docSigned','docSignedForSub','delete'];
+  displayedColumns: string[] = ['checkbox', 'name', 'osha','oshaExp','oshaType'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   constructor( private router: Router, private dialogRef: MatDialog ) { }
@@ -49,9 +48,7 @@ export class ListofAssignusersComponent implements OnInit {
     this.dialogRef.open( AddSitePopupComponent, { width: '900px', height: 'auto', panelClass: 'add-site-modal-container' } );
   };
 
-  openEditSiteDialog() {
-    this.dialogRef.open( EditSiteModalComponent, { width: '900px', height: 'auto', panelClass: 'add-site-modal-container' } );
-  }
+ 
 
   ngOnInit(): void {
   }
@@ -63,17 +60,6 @@ export class ListofAssignusersComponent implements OnInit {
   FilterChange(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue;
-  }
-
-  remove(row: any){
-    console.log("remove function call"); 
-  }
-  goToAddProfile() {
-    this.router.navigateByUrl( '/dashboard/addProfile' );
-  }
-
-  goToDocument(element: any){
-    this.router.navigateByUrl( '/dashboard/document-list' );
   }
 
 }
