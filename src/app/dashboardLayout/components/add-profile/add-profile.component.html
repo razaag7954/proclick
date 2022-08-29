@@ -13,22 +13,66 @@
                 </label>
                 <input id='file' type='file' style='display: none;' />
                 <app-divider></app-divider>
-                <div class='osha-text'>OSHA #:  ABCS0245</div>
+                <div class='osha-text'>
+                    OSHA #:  {{OSHANumFormData.value.OSHANumber}}
+                    <svg 
+                        style='width:20px;height:20px;color:#000000;margin-bottom:-4px;cursor:pointer;'
+                        viewBox='0 0 24 24'
+                        *ngIf='showOSHANum === false; else showOSHANumForm'
+                        (click)='toggleShowOSHANum()'
+                    >
+                        <path fill='currentColor' d='M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z' />
+                    </svg>
+                </div>
+                <ng-template #showOSHANumForm>
+                    <app-divider></app-divider>
+                    <form [formGroup]='OSHANumFormData' (ngSubmit)='onOSHANumSubmit(OSHANumFormData.value)'>
+                        <app-input placeholder='OSHA Number' type='text' [required]='true' [control]="$any(OSHANumFormData.get('OSHANumber'))">
+                            <button class='profile-button' style='padding: 3px 10px;' type='submit'>Save</button>
+                        </app-input>
+                    </form>
+                </ng-template>
                 <app-divider></app-divider>
-                <div class='osha-expiration'>OSHA Expiration:  ABCS0245</div>
+                <div class='osha-expiration'>
+                    OSHA Expiration:  {{OSHAExpFormData.value.OSHAExpiration}}
+                    <svg 
+                        style='width:20px;height:20px;color:#000000;margin-bottom:-4px;cursor:pointer;'
+                        viewBox='0 0 24 24'
+                        *ngIf='showOSHAExp === false; else showOSHAExpForm'
+                        (click)='toggleShowOSHAExp()'
+                    >
+                        <path fill='currentColor' d='M14.06,9L15,9.94L5.92,19H5V18.08L14.06,9M17.66,3C17.41,3 17.15,3.1 16.96,3.29L15.13,5.12L18.88,8.87L20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18.17,3.09 17.92,3 17.66,3M14.06,6.19L3,17.25V21H6.75L17.81,9.94L14.06,6.19Z' />
+                    </svg>
+                </div>
+                <ng-template #showOSHAExpForm>
+                    <app-divider></app-divider>
+                    <form [formGroup]='OSHAExpFormData' (ngSubmit)='onOSHAExpSubmit(OSHAExpFormData.value)'>
+                        <app-input placeholder='Expiration Date' type='date' [required]='true' [control]="$any(OSHAExpFormData.get('OSHAExpiration'))">
+                            <button class='profile-button' style='padding: 3px 10px;' type='submit'>Save</button>
+                        </app-input>
+                    </form>
+                </ng-template>
                 <app-divider></app-divider>
                 <MySelectComponent [options]='ohsaType' placeholder='OSHA Type' [control]="$any(formData.get('oshaType'))"></MySelectComponent>
                 <app-divider></app-divider>
                 <div class='upload-buttons-container'>
-                    <button class='profile-button' (click)="openDialog()">Upload Photo ID</button>
-                    <button class='profile-button'>Upload OSHA Card</button>
+                    <button class='profile-button' *ngIf='photoID; else uploadPhotoIDLabel' (click)='openDialog()'>Show Photo ID</button>
+                    <ng-template #uploadPhotoIDLabel>
+                        <label for='photoID' class='profile-button'>Upload Photo ID</label>
+                        <input type='file' id='photoID' (change)='handleGetPhotoID($event)' style='display: none;' accept='image/*' />
+                    </ng-template>
+                    <button class='profile-button' *ngIf='OSHACard; else uploadOSHACardLabel' (click)='openDialog()'>Show OSHA Card</button>
+                    <ng-template #uploadOSHACardLabel>
+                        <label for='OSHACard' class='profile-button'>Upload OSHA Card</label>
+                        <input type='file' id='OSHACard' (change)='handleGetOSHACard($event)' style='display: none;' accept='image/*' />
+                    </ng-template>
                 </div>
                 <app-divider></app-divider>
                 <button class='profile-button orientation-button' (click)="goToAllDocument()">
                     <div class='odbt-container'>
                         Orientation Documents
-                        <svg style="width:16px;height:16px;margin-left:12px;" viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                        <svg style='width:16px;height:16px;margin-left:12px;' viewBox='0 0 24 24'>
+                            <path fill='currentColor' d='M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z' />
                         </svg>
                     </div>
                 </button>
