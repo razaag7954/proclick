@@ -47,6 +47,10 @@ export class AddProfileComponent implements OnInit {
   goToListOfProfile() {
     this.router.navigateByUrl( '/dashboard/profile' );
   }
+
+  goToAllDocument() {
+    this.router.navigateByUrl( '/dashboard/document-list' );
+  }
   profileType = [
     { id: 1, name: 'Pm Super' },
     { id: 2, name: 'GC' },

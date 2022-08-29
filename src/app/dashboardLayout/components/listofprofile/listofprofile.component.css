@@ -32,3 +32,7 @@
     display: flex;
     justify-content: space-between;
 }
+
+.cursor_pointer {
+    cursor: pointer;
+}
