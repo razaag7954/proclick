@@ -8,7 +8,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class SelectComponent implements OnInit {
   @Input() selectedValue!: number;
-  @Input() options!: any[];
+  @Input() options!: any;
   @Input() placeholder:string = "Select";
   @Input() control! : FormControl;
   constructor() { }

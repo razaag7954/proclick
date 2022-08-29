@@ -8,6 +8,7 @@ import { AuthModule } from './authLayout/auth.module';
 import { DashboardModule } from './dashboardLayout/dashboard.module';
 import { SharedModule } from './shared/shared.module';
 import { DndDirective } from './directives/dnd.directive';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DndDirective } from './directives/dnd.directive';
     BrowserAnimationsModule,
     AuthModule,
     DashboardModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

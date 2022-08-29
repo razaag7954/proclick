@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ImagePopupComponent } from '../image-popup/image-popup.component';
+import { OshatypesService } from 'src/app/services/oshatypes.service';
 @Component( {
   selector: 'app-add-profile',
   templateUrl: './add-profile.component.html',
@@ -12,8 +13,17 @@ import { ImagePopupComponent } from '../image-popup/image-popup.component';
 export class AddProfileComponent implements OnInit {
 
   formData!: FormGroup;
-  
-  constructor( private router: Router, private dialogRef: MatDialog ) { }
+  ohsaType!: any;
+  constructor( private router: Router, private dialogRef: MatDialog, private oshaTypes:OshatypesService ) { 
+    this.oshaTypes.getOshaTypes().subscribe((data)=>{
+      console.log(data, "this is osha types api call result");
+      this.ohsaType =  data;
+      
+      return data;
+    })
+  }
+
+
 
   openDialog() {
     this.dialogRef.open( ImagePopupComponent, { panelClass: 'image-modal-container' } );
@@ -55,9 +65,9 @@ export class AddProfileComponent implements OnInit {
     { id: 5, name: 'Admin' },
   ];
 
-  ohsaType = [
-    { id: 1, name: 'Volvo' },
-    { id: 2, name: 'Saab' },
-    { id: 3, name: 'Opel' }
-  ];
+  // ohsaType = [
+  //   { id: 1, name: 'Volvo' },
+  //   { id: 2, name: 'Saab' },
+  //   { id: 3, name: 'Opel' }
+  // ];
 }
