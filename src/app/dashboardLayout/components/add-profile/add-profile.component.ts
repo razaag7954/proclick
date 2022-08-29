@@ -15,10 +15,7 @@ export class AddProfileComponent implements OnInit {
   formData!: FormGroup;
   ohsaType!: any;
   constructor( private router: Router, private dialogRef: MatDialog, private oshaTypes:OshatypesService ) { 
-    this.oshaTypes.getOshaTypes().subscribe((data)=>{
-      console.log(data, "this is osha types api call result");
-      this.ohsaType =  data;
-      
+    this.ohsaType =this.oshaTypes.getOshaTypes().subscribe((data)=>{
       return data;
     })
   }
@@ -64,10 +61,4 @@ export class AddProfileComponent implements OnInit {
     { id: 4, name: 'Worker' },
     { id: 5, name: 'Admin' },
   ];
-
-  // ohsaType = [
-  //   { id: 1, name: 'Volvo' },
-  //   { id: 2, name: 'Saab' },
-  //   { id: 3, name: 'Opel' }
-  // ];
 }
