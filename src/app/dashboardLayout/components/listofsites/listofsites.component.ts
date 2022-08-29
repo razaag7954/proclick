@@ -78,5 +78,7 @@ export class ListofsitesComponent implements OnInit {
     this.router.navigateByUrl( '/dashboard/document-list' );
   }
 
-  // EditSiteModalComponent
+  goToAssingUsersTable() {
+    this.router.navigateByUrl( '/dashboard/assign-users' );
+  }
 }

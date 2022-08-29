@@ -16,6 +16,7 @@ import { HomeComponent } from './dashboardLayout/components/home/home.component'
 import { AddProfileComponent } from './dashboardLayout/components/add-profile/add-profile.component';
 import { ListofdocumentComponent } from './dashboardLayout/components/listofdocument/listofdocument.component';
 import { ListofprofileComponent } from './dashboardLayout/components/listofprofile/listofprofile.component';
+import { ListofAssignusersComponent } from './dashboardLayout/components/listof-assignusers/listof-assignusers.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'auth/login', pathMatch: 'full'},
@@ -40,6 +41,7 @@ const routes: Routes = [
       { path: 'addProfile', component: AddProfileComponent },
       { path: 'sites', component: SitesComponent },
       { path: 'document-list', component: ListofdocumentComponent },
+      { path: 'assign-users', component: ListofAssignusersComponent },
     ]
   },
 ];
