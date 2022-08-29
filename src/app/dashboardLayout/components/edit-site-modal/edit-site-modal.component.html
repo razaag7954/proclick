@@ -1,0 +1,32 @@
+<div class='add-site-popup-container'>
+    <div class='add-site-popup-header'>
+        <svg class='popup-header-icon' viewBox='0 0 24 24' (click)='closeDialog()'>
+            <path fill='currentColor' d='M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z' />
+        </svg>
+    </div>
+    <div class='add-site-popup-body'>
+        <AuthScreenContainer>
+            <AuthScreenHeader
+                header='Edit Site'
+                description='Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Curabitur arcu erat, accumsan id imperdiet et,'
+            >
+            </AuthScreenHeader>
+            <formContainer>
+                <form [formGroup]='formData' (ngSubmit)='onSubmit(formData.value)'>
+                    <app-input placeholder='Site Name' type='text' [required]='true' [control]="$any(formData.get('siteName'))"></app-input>
+                    <app-divider></app-divider>
+                    <app-input placeholder='Site Address' type='text' [required]='true' [control]="$any(formData.get('siteAddress'))"></app-input>
+                    <app-divider></app-divider>
+                    <app-input placeholder='City' type='text' [required]='true' [control]="$any(formData.get('city'))"></app-input>
+                    <app-divider></app-divider>
+                    <MySelectComponent [options]='states' placeholder='State' [control]="$any(formData.get('state'))"></MySelectComponent>
+                    <app-divider></app-divider>
+                    <MySelectComponent [options]='zipCodes' placeholder='Zip Code' [control]="$any(formData.get('zipCode'))"></MySelectComponent>
+                    <app-divider></app-divider>
+                    <app-divider></app-divider>
+                    <my-button text='Save' [isDisabled]='formData.invalid' type='submit'></my-button>
+                </form>
+            </formContainer>
+        </AuthScreenContainer>
+    </div>
+</div>

@@ -19,6 +19,7 @@ import { ListofprofileComponent } from './components/listofprofile/listofprofile
 import { ListofsitesComponent } from './components/listofsites/listofsites.component';
 import { AddSitePopupComponent } from './components/add-site-popup/add-site-popup.component';
 import { AddBulkProfilePopupComponent } from './components/add-bulk-profile-popup/add-bulk-profile-popup.component';
+import { EditSiteModalComponent } from './components/edit-site-modal/edit-site-modal.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { AddBulkProfilePopupComponent } from './components/add-bulk-profile-popu
     ListofsitesComponent,
     AddSitePopupComponent,
     AddBulkProfilePopupComponent,
+    EditSiteModalComponent,
   ],
   imports: [
     CommonModule,

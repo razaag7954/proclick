@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { AddSitePopupComponent } from '../add-site-popup/add-site-popup.component';
+import { EditSiteModalComponent } from '../edit-site-modal/edit-site-modal.component';
 export interface PeriodicElement {
   id: number;
   siteAddress: string;
@@ -50,6 +51,10 @@ export class ListofsitesComponent implements OnInit {
     this.dialogRef.open( AddSitePopupComponent, { width: '900px', height: 'auto', panelClass: 'add-site-modal-container' } );
   };
 
+  openEditSiteDialog() {
+    this.dialogRef.open( EditSiteModalComponent, { width: '900px', height: 'auto', panelClass: 'add-site-modal-container' } );
+  }
+
   ngOnInit(): void {
   }
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -73,4 +78,5 @@ export class ListofsitesComponent implements OnInit {
     this.router.navigateByUrl( '/dashboard/document-list' );
   }
 
+  // EditSiteModalComponent
 }
