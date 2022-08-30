@@ -13,11 +13,9 @@ import { OshatypesService } from 'src/app/services/oshatypes.service';
 export class AddProfileComponent implements OnInit {
 
   formData!: FormGroup;
-  ohsaType!: any;
+  ohsaType!: Array<Object>;
   constructor( private router: Router, private dialogRef: MatDialog, private oshaTypes:OshatypesService ) { 
-    this.ohsaType =this.oshaTypes.getOshaTypes().subscribe((data)=>{
-      return data;
-    })
+   
   }
 
 
@@ -28,6 +26,9 @@ export class AddProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
+    this.oshaTypes.getOshaTypes().subscribe((data)=>{
+      this.ohsaType = JSON.parse(JSON.stringify(data));
+    })
   };
 
   createForm() {
@@ -61,4 +62,5 @@ export class AddProfileComponent implements OnInit {
     { id: 4, name: 'Worker' },
     { id: 5, name: 'Admin' },
   ];
+  // ohsaType = [{"_id":"630db91d22a5016c4c6aa072","name":"Volvo","__v":0},{"_id":"630db92a22a5016c4c6aa074","name":"Saab","__v":0},{"_id":"630db93322a5016c4c6aa076","name":"Opel","__v":0}]
 }

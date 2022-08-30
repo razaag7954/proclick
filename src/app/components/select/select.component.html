@@ -1,5 +1,5 @@
 <div class="container">
-    <ng-select [items]="options" bindLabel="name" bindValue="id" [placeholder]="placeholder" [(ngModel)]="selectedValue"
+    <ng-select [items]="options" bindLabel="name" bindValue="_id" [placeholder]="placeholder" [(ngModel)]="selectedValue"
         class="mySelect" [formControl]="control">
     </ng-select>
     <ng-container *ngIf="displayErrors()">

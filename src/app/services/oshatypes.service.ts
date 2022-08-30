@@ -8,7 +8,7 @@ export class OshatypesService {
   constructor(private http: HttpClient) { }
 
   getOshaTypes() {
-    let url = "https://jsonplaceholder.typicode.com/users";
+    let url = "https://nodecrud-apis.herokuapp.com/users";
     return this.http.get(url);
   }
 }
