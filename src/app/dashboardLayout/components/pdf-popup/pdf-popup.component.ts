@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
+import PDFfile from '../../../../assets/PDFs/orientation_paper.pdf';
 import { saveAs } from 'file-saver';
 
 @Component({
@@ -9,7 +10,8 @@ import { saveAs } from 'file-saver';
 })
 export class PdfPopupComponent implements OnInit {
 
-  file: string = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
+  // file: string = 'https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf';
+  file: string = 'https://online-bucket-storage01.s3.ap-south-1.amazonaws.com/orientation_paper.pdf';
 
   constructor( 
     private dialogRef: MatDialogRef<PdfPopupComponent>,
