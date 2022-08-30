@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { OshatypesService } from 'src/app/services/oshaServices/oshatypes.service';
+import { ProfiletypeservicesService } from 'src/app/services/profileServices/profiletypeservices.service';
 
 @Component({
   selector: 'app-invite',
@@ -9,11 +11,26 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class InviteComponent implements OnInit {
 
   formData!: FormGroup;
+  ohsaType!: Array<Object>;
+  profileType!: Array<Object>;
 
-  constructor() { }
+  constructor(
+    private oshaTypes: OshatypesService,
+    private profileTypes: ProfiletypeservicesService
+  ) { }
 
   ngOnInit(): void {
     this.createForm();
+
+    // api call for get osha types
+    this.oshaTypes.getOshaTypes().subscribe((data) => {
+      this.ohsaType = JSON.parse(JSON.stringify(data));
+    });
+
+    // api call for get profile types
+    this.profileTypes.getProfileTypes().subscribe((data) => {
+      this.profileType = JSON.parse(JSON.stringify(data));
+    })
   }
   createForm() {
     this.formData = new FormGroup({
@@ -38,19 +55,4 @@ export class InviteComponent implements OnInit {
   onSubmit(form: any) {
     console.log(form);
   }
-
-  profileType = [
-    { id: 1, name: 'Pm Super' },
-    { id: 2, name: 'GC' },
-    { id: 3, name: 'Sub' },
-    { id: 4, name: 'Worker' },
-    { id: 5, name: 'Admin' },
-  ];
-
-  ohsaType = [
-    { id: 1, name: 'Volvo' },
-    { id: 2, name: 'Saab' },
-    { id: 3, name: 'Opel' }
-  ];
-
 }

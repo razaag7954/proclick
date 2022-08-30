@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { OshatypesService } from 'src/app/services/oshaServices/oshatypes.service';
+import { ProfiletypeservicesService } from 'src/app/services/profileServices/profiletypeservices.service';
 import { ImagePopupComponent } from '../image-popup/image-popup.component';
+
 @Component( {
   selector: 'app-add-profile',
   templateUrl: './add-profile.component.html',
@@ -13,10 +16,12 @@ export class AddProfileComponent implements OnInit {
   OSHANumFormData!: FormGroup;
   OSHAExpFormData!: FormGroup;
   formData!: FormGroup;
+  ohsaType!: Array<Object>;
+  profileType!: Array<Object>;
 
   showOSHANum: boolean = false;
   showOSHAExp: boolean = false;
-  
+
   photoID: string = '';
   OSHACard: string = '';
 
@@ -43,9 +48,15 @@ export class AddProfileComponent implements OnInit {
       this.showOSHAExp = true;
     }
   };
-  
-  constructor( private router: Router, private dialogRef: MatDialog ) { }
 
+  constructor(
+    private router: Router,
+    private dialogRef: MatDialog,
+    private oshaTypes:OshatypesService,
+    private profileTypes: ProfiletypeservicesService
+  ) {
+
+  }
   openDialog() {
     this.dialogRef.open( ImagePopupComponent, { panelClass: 'image-modal-container' } );
   };
@@ -54,6 +65,16 @@ export class AddProfileComponent implements OnInit {
     this.createOSHANumForm();
     this.createOSHAExpForm();
     this.createForm();
+
+    // api call for get osha types
+    this.oshaTypes.getOshaTypes().subscribe((data)=>{
+      this.ohsaType = JSON.parse(JSON.stringify(data));
+    });
+
+    // api call for get profile types
+    this.profileTypes.getProfileTypes().subscribe((data)=>{
+      this.profileType = JSON.parse(JSON.stringify(data));
+    })
   };
 
   createOSHANumForm() {
@@ -104,17 +125,5 @@ export class AddProfileComponent implements OnInit {
   goToAllDocument() {
     this.router.navigateByUrl( '/dashboard/document-list' );
   }
-  profileType = [
-    { id: 1, name: 'Pm Super' },
-    { id: 2, name: 'GC' },
-    { id: 3, name: 'Sub' },
-    { id: 4, name: 'Worker' },
-    { id: 5, name: 'Admin' },
-  ];
 
-  ohsaType = [
-    { id: 1, name: 'Volvo' },
-    { id: 2, name: 'Saab' },
-    { id: 3, name: 'Opel' }
-  ];
 }
