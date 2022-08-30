@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { OshatypesService } from 'src/app/services/oshaServices/oshatypes.service';
+import { ProfiletypeservicesService } from 'src/app/services/profileServices/profiletypeservices.service';
 import { ImagePopupComponent } from '../image-popup/image-popup.component';
-import { OshatypesService } from 'src/app/services/oshatypes.service';
+
 @Component( {
   selector: 'app-add-profile',
   templateUrl: './add-profile.component.html',
@@ -14,7 +16,13 @@ export class AddProfileComponent implements OnInit {
 
   formData!: FormGroup;
   ohsaType!: Array<Object>;
-  constructor( private router: Router, private dialogRef: MatDialog, private oshaTypes:OshatypesService ) { 
+  profileType!: Array<Object>;
+  constructor( 
+    private router: Router, 
+    private dialogRef: MatDialog, 
+    private oshaTypes:OshatypesService,
+    private profileTypes: ProfiletypeservicesService 
+    ) { 
    
   }
 
@@ -26,8 +34,15 @@ export class AddProfileComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm();
+    
+    // api call for get osha types
     this.oshaTypes.getOshaTypes().subscribe((data)=>{
       this.ohsaType = JSON.parse(JSON.stringify(data));
+    });
+
+    // api call for get profile types
+    this.profileTypes.getProfileTypes().subscribe((data)=>{
+      this.profileType = JSON.parse(JSON.stringify(data));
     })
   };
 
@@ -55,12 +70,5 @@ export class AddProfileComponent implements OnInit {
   goToListOfProfile() {
     this.router.navigateByUrl( '/dashboard/profile' );
   }
-  profileType = [
-    { id: 1, name: 'Pm Super' },
-    { id: 2, name: 'GC' },
-    { id: 3, name: 'Sub' },
-    { id: 4, name: 'Worker' },
-    { id: 5, name: 'Admin' },
-  ];
-  // ohsaType = [{"_id":"630db91d22a5016c4c6aa072","name":"Volvo","__v":0},{"_id":"630db92a22a5016c4c6aa074","name":"Saab","__v":0},{"_id":"630db93322a5016c4c6aa076","name":"Opel","__v":0}]
+  
 }
