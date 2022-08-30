@@ -87,8 +87,7 @@ import { SelectComponent } from '../components/select/select.component';
     MatPaginatorModule,
     MatSortModule,
     MatFormFieldModule,
-    MatInputModule,
-
+    MatInputModule
   ]
 })
 export class SharedModule { }
