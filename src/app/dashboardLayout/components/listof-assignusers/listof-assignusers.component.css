@@ -71,3 +71,9 @@
 .siteDecs {
     text-decoration: underline;
 }
+
+
+.AssingHeader {
+    width: 190px !important;
+    text-align: start;
+}

@@ -39,7 +39,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./listof-assignusers.component.css']
 })
 export class ListofAssignusersComponent implements OnInit {
-  displayedColumns: string[] = ['checkbox', 'name', 'osha','oshaExp','oshaType'];
+  displayedColumns: string[] = ['checkbox', 'name', 'osha','oshaExp','oshaType', 'assign'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   constructor( private router: Router, private dialogRef: MatDialog ) { }
@@ -60,6 +60,10 @@ export class ListofAssignusersComponent implements OnInit {
   FilterChange(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue;
+  }
+
+  assignUser(element: any ){
+    console.log(element)
   }
 
 }
