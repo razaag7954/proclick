@@ -2,11 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  apiURL = environment.BASE_URL;
   private _isLoggedIn$ = new BehaviorSubject<boolean>(false);
   isLoggedIn$ = this._isLoggedIn$;
   constructor(private router: Router,private http: HttpClient) { 
@@ -28,8 +30,8 @@ export class AuthService {
     // );
   }
 
-  signUP( data:any ) {
-    this.http.post("adfsd", data);
+  signUp( data:any ) {
+    return this.http.post(`${this.apiURL}apis/auth/singup`, data);
   }
 
   logout() {

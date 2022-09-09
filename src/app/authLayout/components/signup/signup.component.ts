@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { from } from 'rxjs';
+import { AuthService } from 'src/app/services/authServices/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +13,7 @@ export class SignupComponent implements OnInit {
 
   formData!: FormGroup;
   
-  constructor(private router: Router) { }
+  constructor(private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.createForm();
@@ -30,14 +32,17 @@ export class SignupComponent implements OnInit {
       password: new FormControl('', [
         Validators.required
       ]),
-      oshno: new FormControl('', [
+      oshaNumber: new FormControl('', [
         Validators.required
       ]),
     })
   }
 
   onSubmit(form: any){
-    console.log(form);
+    const data = form;
+    this.authService.signUp(data).subscribe(result => {
+      console.log(result, "this is my result");
+    })
     this.router.navigateByUrl('/auth/account-varification');
   }
 
