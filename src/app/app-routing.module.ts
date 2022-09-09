@@ -17,6 +17,7 @@ import { AddProfileComponent } from './dashboardLayout/components/add-profile/ad
 import { ListofdocumentComponent } from './dashboardLayout/components/listofdocument/listofdocument.component';
 import { ListofprofileComponent } from './dashboardLayout/components/listofprofile/listofprofile.component';
 import { ListofAssignusersComponent } from './dashboardLayout/components/listof-assignusers/listof-assignusers.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'auth/login', pathMatch: 'full'},
@@ -31,7 +32,7 @@ const routes: Routes = [
     ]
   },
   {path: 'dashboard', redirectTo: 'dashboard/home', pathMatch: 'full'},
-  {path: 'dashboard', component: DashboardComponent,
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard],
     children:[
       { path: 'home', component: HomeComponent },
       { path: 'documents', component: DocumentComponent },
