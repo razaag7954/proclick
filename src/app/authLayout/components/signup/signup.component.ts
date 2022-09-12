@@ -30,7 +30,8 @@ export class SignupComponent implements OnInit {
         Validators.email
       ]),
       password: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.maxLength(15),
       ]),
       oshaNumber: new FormControl('', [
         Validators.required,
@@ -45,7 +46,7 @@ export class SignupComponent implements OnInit {
     this.authService.signUp(data).subscribe(result => {
       console.log(result, "this is my result");
     })
-    this.router.navigateByUrl('/auth/account-varification');
+    this.router.navigateByUrl('/auth/login');
   }
 
 

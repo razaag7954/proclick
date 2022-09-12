@@ -3,7 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { OshatypesService } from 'src/app/services/oshaServices/oshatypes.service';
-import { ProfiletypeservicesService } from 'src/app/services/profileServices/profiletypeservices.service';
+import { ProfiletypeservicesService } from 'src/app/services/profileTypesServices/profiletypeservices.service';
 import { ImagePopupComponent } from '../image-popup/image-popup.component';
 
 @Component( {

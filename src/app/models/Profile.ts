@@ -1,0 +1,23 @@
+export interface ProfileInterface {
+    "_id": string,
+    "firstName": string,
+    "lastName": string,
+    "title": string,
+    "email": string,
+    "businessName": string,
+    "contractorID": string,
+    "address": string,
+    "city": string,
+    "state": string,
+    "country": string,
+    "phoneNumber": string,
+    "oshaNumber": number,
+    "oshaExpiration": string,
+    "oshaCardPicture": string,
+    "oshaType": string,
+    "photoIdPicture": string,
+    "businessCategory": string,
+    "profileType": string,
+    "orientaionConfirmation": string,
+    "__v": string
+  }

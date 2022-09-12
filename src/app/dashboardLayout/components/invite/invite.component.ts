@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { OshatypesService } from 'src/app/services/oshaServices/oshatypes.service';
-import { ProfiletypeservicesService } from 'src/app/services/profileServices/profiletypeservices.service';
+import { ProfiletypeservicesService } from 'src/app/services/profileTypesServices/profiletypeservices.service';
+
 
 @Component({
   selector: 'app-invite',

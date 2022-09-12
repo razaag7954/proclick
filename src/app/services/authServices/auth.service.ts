@@ -20,8 +20,8 @@ export class AuthService {
   logIn( data: any ) { 
     this.http.post(`${this.apiURL}apis/auth/login`, data).subscribe((result:any) => {
         localStorage.setItem('authToken', result['token']);
-        localStorage.setItem('userName', `${result['firstName']} ${result['lastName']}`);
-        localStorage.setItem('userEmail', result['email'])
+        localStorage.setItem('userName', `${result.user['firstName']} ${result.user['lastName']}`);
+        localStorage.setItem('userEmail', result.user['email'])
         this._isLoggedIn$.next(true);
         this.router.navigateByUrl('/dashboard/home');
     })

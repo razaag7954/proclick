@@ -14,10 +14,10 @@
                 Please Type Valid Email
             </div>
             <div *ngIf="control.errors?.['minlength']" class="error">
-                It must be at least 3 characters long.
+                It must be at least {{control.errors?.['minlength']}} characters long.
             </div>
             <div *ngIf="control.errors?.['maxlength']" class="error">
-                It can be max 8 characters long.
+                It can be max {{control.errors?.['maxlength']}} characters long.
             </div>
         </div>
 
