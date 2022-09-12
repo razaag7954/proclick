@@ -17,17 +17,12 @@ export class AuthService {
   }
 
 
-  logIn( data: any ) {
-    this._isLoggedIn$.next(true);
-    localStorage.setItem('authToken', "thisis token")
-    // this.http.post("adsfasd", data).pipe(
-    //   tap((response) => {
-    //     localStorage.setItem('authToken', "thisis token")
-    //     this._isLoggedIn$.next(true);
-    //     console.log(response);
-
-    //   })
-    // );
+  logIn( data: any ) { 
+    this.http.post(`${this.apiURL}apis/auth/login`, data).subscribe((result:any) => {
+        localStorage.setItem('authToken', result['token']);
+        this._isLoggedIn$.next(true);
+        this.router.navigateByUrl('/dashboard/home');
+    })
   }
 
   signUp( data:any ) {

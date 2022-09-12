@@ -1,16 +1,10 @@
 <div class="formgroup">
     <div class="input-container">
-        <input
-        [formControl]="control"
-        [type]="type"
-        [placeholder]="placeholder"
-        [required]="required"
-        [readonly]="readonly"
-        class="myInputField"
-        >
+        <input [formControl]="control" [type]="type" [placeholder]="placeholder" [required]="required"
+            [readonly]="readonly" class="myInputField">
         <ng-content></ng-content>
     </div>
-    
+
     <ng-container *ngIf="displayErrors()">
         <div class="errosContainer">
             <div *ngIf="control.errors?.['required']" class="error">
@@ -19,8 +13,14 @@
             <div *ngIf="control.errors?.['email']" class="error">
                 Please Type Valid Email
             </div>
+            <div *ngIf="control.errors?.['minlength']" class="error">
+                It must be at least 3 characters long.
+            </div>
+            <div *ngIf="control.errors?.['maxlength']" class="error">
+                It can be max 8 characters long.
+            </div>
         </div>
-        
+
     </ng-container>
 
 </div>

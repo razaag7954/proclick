@@ -20,7 +20,7 @@ import { ListofAssignusersComponent } from './dashboardLayout/components/listof-
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+  {path: '', redirectTo: 'dashboard/home', pathMatch: 'full'},
   {path: 'auth', redirectTo: 'auth/login', pathMatch: 'full'},
   {path: 'auth', component: AuthComponent,
     children:[

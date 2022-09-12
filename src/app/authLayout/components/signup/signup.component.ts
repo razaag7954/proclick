@@ -33,7 +33,9 @@ export class SignupComponent implements OnInit {
         Validators.required
       ]),
       oshaNumber: new FormControl('', [
-        Validators.required
+        Validators.required,
+        Validators.maxLength(8),
+        Validators.minLength(3)
       ]),
     })
   }

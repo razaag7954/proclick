@@ -28,8 +28,8 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form: any){
-    this.authService.logIn("hifrom")
-    this.router.navigateByUrl('/dashboard/home');
+    const data = form;
+    this.authService.logIn(data);
   }
 
 }
