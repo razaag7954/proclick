@@ -20,6 +20,8 @@ export class AuthService {
   logIn( data: any ) { 
     this.http.post(`${this.apiURL}apis/auth/login`, data).subscribe((result:any) => {
         localStorage.setItem('authToken', result['token']);
+        localStorage.setItem('userName', `${result['firstName']} ${result['lastName']}`);
+        localStorage.setItem('userEmail', result['email'])
         this._isLoggedIn$.next(true);
         this.router.navigateByUrl('/dashboard/home');
     })
@@ -32,6 +34,8 @@ export class AuthService {
   logout() {
     this._isLoggedIn$.next(false);
     localStorage.removeItem('authToken');
+    localStorage.removeItem('userName');
+    localStorage.removeItem('userEmail');
     this.router.navigateByUrl('/auth/login')
   }
 }
