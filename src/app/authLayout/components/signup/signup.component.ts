@@ -32,6 +32,7 @@ export class SignupComponent implements OnInit {
       password: new FormControl('', [
         Validators.required,
         Validators.maxLength(15),
+        Validators.minLength(3)
       ]),
       oshaNumber: new FormControl('', [
         Validators.required,

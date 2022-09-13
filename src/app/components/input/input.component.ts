@@ -12,6 +12,7 @@ export class InputComponent implements OnInit {
   @Input() placeholder: string = '';
   @Input() required: boolean = false;
   @Input() readonly: boolean = false;
+  maxLength?: number;
   constructor() { }
 
   ngOnInit(): void {
