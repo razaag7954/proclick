@@ -32,7 +32,7 @@ export class SignupComponent implements OnInit {
       password: new FormControl('', [
         Validators.required,
         Validators.maxLength(15),
-        Validators.minLength(3)
+        Validators.minLength(8)
       ]),
       oshaNumber: new FormControl('', [
         Validators.required,
@@ -44,10 +44,7 @@ export class SignupComponent implements OnInit {
 
   onSubmit(form: any){
     const data = form;
-    this.authService.signUp(data).subscribe(result => {
-      console.log(result, "this is my result");
-    })
-    this.router.navigateByUrl('/auth/login');
+    this.authService.signUp(data)
   }
 
 
